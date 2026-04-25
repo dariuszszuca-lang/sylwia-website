@@ -3,9 +3,9 @@
 import { useEffect, useState } from "react";
 
 const NAV = [
-  { href: "#oferta", label: "Oferta" },
-  { href: "#proces", label: "Proces" },
+  { href: "#sylwia", label: "Sylwia" },
   { href: "#konsultacja", label: "Konsultacja" },
+  { href: "#projekty", label: "Projekty" },
   { href: "#faq", label: "FAQ" },
 ];
 

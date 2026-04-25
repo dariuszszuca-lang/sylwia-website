@@ -2,36 +2,13 @@ import Image from "next/image";
 import { BookingWidget } from "@/components/BookingWidget";
 import { SiteHeader } from "@/components/SiteHeader";
 import { FAQAccordion } from "@/components/FAQAccordion";
+import { ProjectsGrid } from "@/components/ProjectsGrid";
+import { NewsletterForm } from "@/components/NewsletterForm";
 
 const metrics = [
   { value: "15+", label: "lat praktyki na rynku nieruchomości" },
   { value: "1 600+", label: "agentów w społeczności Nieruchomości Spod Lady" },
   { value: "18311", label: "numer licencji zawodowej" },
-];
-
-const offers = [
-  {
-    index: "01",
-    badge: "Sprzedaż",
-    title: "Sprzedaż nieruchomości premium",
-    text: "Prowadzenie sprzedaży z naciskiem na pozycjonowanie oferty, selekcję kupujących, narrację ceny i wysoki standard komunikacji.",
-    points: ["Pozycjonowanie oferty", "Selekcja kupujących", "Narracja ceny", "Off-market"],
-  },
-  {
-    index: "02",
-    badge: "Konsultacje",
-    title: "Konsultacje strategiczne 1:1",
-    text: "Godzina konkretu dla pośredników, właścicieli biur i osób, które chcą poukładać ofertę, sprzedaż, markę osobistą lub proces obsługi klienta.",
-    points: ["Strategia sprzedaży", "Marka osobista", "Proces współpracy", "300 zł / 60 min"],
-    featured: true,
-  },
-  {
-    index: "03",
-    badge: "Szkolenia",
-    title: "Szkolenia i wystąpienia branżowe",
-    text: "Warsztaty o sprzedaży, współpracy między agentami, rynku off-market i budowaniu przewagi przez zaufanie, nie przez hałas.",
-    points: ["Warsztaty dla biur", "Wystąpienia eventowe", "Mentoring zespołów"],
-  },
 ];
 
 const differentiators = [
@@ -53,49 +30,38 @@ const differentiators = [
   },
 ];
 
-const process = [
-  {
-    step: "01",
-    name: "Diagnoza",
-    text: "Krótka analiza celu, sytuacji i miejsca, w którym jesteś dziś. Bez ogólników, bez ankiet.",
-  },
-  {
-    step: "02",
-    name: "Strategia",
-    text: "Ustalenie kierunku: sprzedaż, pozycjonowanie oferty, współpraca między agentami lub marka osobista.",
-  },
-  {
-    step: "03",
-    name: "Decyzja",
-    text: "Konkretny plan działań, priorytety i ruchy, które mają sens biznesowo i są wykonalne w Twojej rzeczywistości.",
-  },
+const trainingTopics = [
+  "Sprzedaż premium i pozycjonowanie oferty",
+  "Współpraca między agentami i rynek off-market",
+  "Marka osobista pośrednika",
+  "Komunikacja z klientem premium",
 ];
 
 const faqItems = [
   {
     question: "Dla kogo jest konsultacja 1:1?",
     answer:
-      "Dla pośredników, właścicieli biur, osób rozwijających markę osobistą w nieruchomościach oraz klientów, którzy chcą skonsultować strategię sprzedaży lub zakupu. Konsultacja ma sens, gdy masz konkretną sytuację i decyzję do podjęcia, a nie szukasz ogólnej wiedzy.",
+      "Dla pośredników, właścicieli biur, osób rozwijających markę osobistą w nieruchomościach oraz klientów, którzy chcą skonsultować strategię sprzedaży lub zakupu.",
   },
   {
     question: "Ile kosztuje konsultacja i jak długo trwa?",
     answer:
-      "Jedna konsultacja trwa 60 minut i kosztuje 300 zł. Po wybraniu terminu w kalendarzu otrzymasz potwierdzenie mailowe oraz link do spotkania (Google Meet) lub adres do spotkania stacjonarnego w Trójmieście.",
+      "Jedna konsultacja trwa 60 minut i kosztuje 300 zł. Po wyborze terminu kontakt odbywa się mailowo i kończy potwierdzeniem spotkania.",
   },
   {
     question: "Jakie tematy najczęściej pojawiają się podczas konsultacji?",
     answer:
-      "Najczęściej są to: strategia sprzedaży konkretnej nieruchomości, rentowność współpracy z klientem, pozyskiwanie ofert off-market, negocjacje z kupującym, proces obsługi i pozycjonowanie marki agenta na rynku premium.",
+      "Najczęściej są to: strategia sprzedaży nieruchomości, rentowność współpracy z klientem, oferty off-market, negocjacje, proces obsługi i pozycjonowanie marki agenta.",
   },
   {
-    question: "Czy prowadzisz szkolenia dla zespołów i wydarzeń branżowych?",
+    question: "Czy Sylwia prowadzi także szkolenia dla zespołów i wydarzeń branżowych?",
     answer:
-      "Tak. Możliwe są szkolenia dla biur i społeczności agentów, wystąpienia eventowe oraz dłuższy mentoring dla osób budujących markę osobistą. Zakres i format ustalamy po krótkiej rozmowie.",
+      "Tak. Możliwe są szkolenia, warsztaty i wystąpienia dla biur, społeczności agentów i eventów branżowych. Napisz mailem o czym chcesz porozmawiać.",
   },
   {
     question: "Czy konsultacja jest stacjonarnie czy online?",
     answer:
-      "Obie formy są możliwe. Online prowadzę przez Google Meet — wystarczy laptop. Stacjonarnie spotykamy się w Trójmieście, miejsce ustalamy indywidualnie.",
+      "Obie formy są możliwe. Online prowadzę przez Google Meet — wystarczy laptop. Stacjonarnie spotykamy się w Trójmieście.",
   },
   {
     question: "Co dzieje się po konsultacji?",
@@ -113,7 +79,7 @@ const jsonLd = {
       name: "Sylwia Wróblewska",
       jobTitle: "Pośredniczka nieruchomości, konsultantka i trenerka branży nieruchomości",
       description:
-        "Sylwia Wróblewska to pośredniczka nieruchomości z Trójmiasta, założycielka Nieruchomości Spod Lady i praktyczka sprzedaży off-market.",
+        "Sylwia Wróblewska — pośredniczka nieruchomości z Trójmiasta, założycielka Nieruchomości Spod Lady, twórczyni Akademii AI w Nieruchomościach (z Dariuszem Szucą).",
       image: "https://sylwiawroblewska.pl/images/sylwia-wroblewska.png",
       url: "https://sylwiawroblewska.pl",
       email: "mailto:sylwia@nieruchomoscispodlady.pl",
@@ -130,20 +96,23 @@ const jsonLd = {
         "konsultacje dla agentów nieruchomości",
         "negocjacje",
         "marka osobista pośrednika",
+        "AI w nieruchomościach",
       ],
       sameAs: [
         "https://www.instagram.com/sylwiawroblewska.pl/",
         "https://www.facebook.com/groups/nieruchomoscispodlady",
+        "https://nieruchomoscispodlady.pl",
+        "https://akademia-ai-nieruchomosci.pl",
       ],
     },
     {
       "@type": "ProfessionalService",
       "@id": "https://sylwiawroblewska.pl/#service",
-      name: "Sylwia Wróblewska",
+      name: "Sylwia Wróblewska — konsultacje i szkolenia",
       url: "https://sylwiawroblewska.pl",
       image: "https://sylwiawroblewska.pl/images/sylwia-wroblewska.png",
       description:
-        "Butikowa sprzedaż nieruchomości, konsultacje i szkolenia dla branży nieruchomości w Trójmieście i online.",
+        "Konsultacje 1:1 i szkolenia dla branży nieruchomości w Trójmieście i online. Założycielka Nieruchomości Spod Lady.",
       areaServed: ["Trójmiasto", "Polska"],
       priceRange: "300 PLN",
       founder: { "@id": "https://sylwiawroblewska.pl/#person" },
@@ -155,7 +124,7 @@ const jsonLd = {
             "@type": "Offer",
             itemOffered: {
               "@type": "Service",
-              name: "Konsultacja 1:1 online",
+              name: "Konsultacja 1:1 online lub stacjonarna",
               description:
                 "Godzinna konsultacja strategiczna dla pośredników i klientów rynku nieruchomości.",
             },
@@ -191,15 +160,15 @@ export default function Home() {
       <SiteHeader />
 
       <main id="top" className="relative overflow-hidden pt-2">
-        {/* Subtle ambient glow — kremowo + fuksja punktowo */}
+        {/* Subtle ambient glow */}
         <div className="pointer-events-none absolute inset-0 -z-10">
           <div className="absolute -left-24 top-[-10%] h-[36rem] w-[36rem] rounded-full bg-fuchsia-200/20 blur-[140px]" />
           <div className="absolute right-[-8%] top-[18%] h-[32rem] w-[32rem] rounded-full bg-champagne-100/40 blur-[160px]" />
           <div className="absolute bottom-[-10%] left-1/3 h-[28rem] w-[28rem] rounded-full bg-fuchsia-100/25 blur-[160px]" />
         </div>
 
-        {/* HERO */}
-        <section className="relative px-6 pt-12 pb-16 sm:px-8 sm:pt-16 lg:px-10 lg:pt-24">
+        {/* HERO — Sylwia jako osoba */}
+        <section id="sylwia" className="relative px-6 pt-12 pb-16 sm:px-8 sm:pt-16 lg:px-10 lg:pt-24">
           <div className="mx-auto max-w-7xl">
             <div className="grid gap-10 lg:grid-cols-[1.05fr_0.95fr] lg:items-end">
               <div className="reveal">
@@ -219,26 +188,25 @@ export default function Home() {
                 </h1>
 
                 <p className="mt-8 max-w-xl text-base leading-8 text-muted sm:text-lg">
-                  Sylwia Wróblewska prowadzi sprzedaż nieruchomości premium,
-                  konsultacje 1:1 i szkolenia dla osób, które chcą działać
-                  precyzyjnie, spokojnie i skutecznie — w Trójmieście i online.
+                  Sylwia Wróblewska. Pośredniczka nieruchomości, założycielka{" "}
+                  <strong className="font-semibold text-foreground-soft">Nieruchomości Spod Lady</strong>,
+                  twórczyni Akademii AI w Nieruchomościach. Trójmiasto i online.
                 </p>
 
                 <div className="mt-10 flex flex-col gap-3 sm:flex-row">
                   <a href="#konsultacja" className="btn-primary">
                     Umów konsultację · 300 zł / h
                   </a>
-                  <a href="#oferta" className="btn-secondary">
-                    Poznaj ofertę
+                  <a href="#projekty" className="btn-secondary">
+                    Zobacz projekty
                   </a>
                 </div>
 
-                {/* Hairline trust */}
                 <div className="mt-12 flex flex-wrap items-center gap-x-8 gap-y-3 text-xs text-muted">
-                  <span className="kicker">Zaufali</span>
-                  <span>Społeczność NSL</span>
+                  <span className="kicker">Aktywna w</span>
+                  <span>Trójmiasto</span>
                   <span>·</span>
-                  <span>Klienci premium Trójmiasto</span>
+                  <span>Społeczność NSL</span>
                   <span>·</span>
                   <span>Eventy branżowe</span>
                 </div>
@@ -258,7 +226,6 @@ export default function Home() {
                     />
                   </div>
 
-                  {/* Floating chip — kontakt */}
                   <div className="absolute -bottom-6 -left-4 rounded-2xl border border-border-strong bg-background-soft/95 px-5 py-4 shadow-md backdrop-blur-xl sm:-left-6">
                     <p className="kicker">Kontakt bezpośredni</p>
                     <a
@@ -269,7 +236,6 @@ export default function Home() {
                     </a>
                   </div>
 
-                  {/* Floating chip — lokalizacja */}
                   <div className="absolute -top-4 -right-2 rounded-2xl border border-border-luxe bg-champagne-50/80 px-5 py-3 shadow-soft backdrop-blur-xl sm:-right-6">
                     <p className="text-xs font-semibold text-champagne-400">Trójmiasto</p>
                     <p className="text-xs text-muted">+ online (Polska)</p>
@@ -296,7 +262,7 @@ export default function Home() {
           </div>
         </section>
 
-        {/* O MARCE */}
+        {/* O MARCE / STORY */}
         <section className="relative px-6 py-20 sm:px-8 lg:px-10">
           <div className="mx-auto max-w-7xl">
             <div className="grid gap-10 lg:grid-cols-[0.42fr_0.58fr] lg:items-end">
@@ -315,7 +281,6 @@ export default function Home() {
               </p>
             </div>
 
-            {/* Bento z wyróżnikami */}
             <div className="mt-12 grid gap-4 md:grid-cols-2 lg:grid-cols-4">
               {differentiators.map((item) => (
                 <article
@@ -330,117 +295,83 @@ export default function Home() {
           </div>
         </section>
 
-        {/* OFERTA */}
-        <section id="oferta" className="relative px-6 py-20 sm:px-8 lg:px-10">
-          <div className="mx-auto max-w-7xl">
-            <div className="flex flex-col gap-6 sm:flex-row sm:items-end sm:justify-between">
-              <div>
-                <span className="kicker">Oferta</span>
-                <h2 className="display-tight mt-5 max-w-3xl text-4xl font-medium leading-[1.02] text-foreground sm:text-5xl lg:text-6xl">
-                  Trzy formaty współpracy, jeden standard pracy.
-                </h2>
-              </div>
-              <a
-                href="#konsultacja"
-                className="text-sm font-medium text-fuchsia-700 underline-offset-4 hover:underline"
-              >
-                Zacznij od konsultacji →
-              </a>
-            </div>
-
-            <div className="mt-12 grid gap-5 lg:grid-cols-3">
-              {offers.map((offer) => (
-                <article
-                  key={offer.title}
-                  className={[
-                    "premium-panel relative rounded-3xl p-8",
-                    offer.featured
-                      ? "border-fuchsia-200 lg:scale-[1.02] lg:shadow-glow"
-                      : "",
-                  ].join(" ")}
-                >
-                  {offer.featured && (
-                    <div className="absolute top-5 right-5 inline-flex items-center gap-2 rounded-full border border-fuchsia-300 bg-fuchsia-50 px-3 py-1 text-[0.65rem] font-semibold tracking-[0.18em] text-fuchsia-700 uppercase">
-                      Najczęściej wybierane
-                    </div>
-                  )}
-
-                  <div className="flex items-center gap-3">
-                    <span className="font-mono text-xs font-medium text-fuchsia-700">
-                      {offer.index}
-                    </span>
-                    <span className="kicker !text-fuchsia-700">{offer.badge}</span>
-                  </div>
-
-                  <h3 className="display mt-6 text-2xl leading-[1.15] font-medium text-foreground sm:text-[1.625rem]">
-                    {offer.title}
-                  </h3>
-
-                  <p className="mt-4 text-sm leading-7 text-muted">{offer.text}</p>
-
-                  <ul className="mt-6 flex flex-wrap gap-2">
-                    {offer.points.map((p) => (
-                      <li
-                        key={p}
-                        className="rounded-full border border-border bg-background-soft/70 px-3 py-1 text-xs text-foreground-soft"
-                      >
-                        {p}
-                      </li>
-                    ))}
-                  </ul>
-
-                  {offer.featured && (
-                    <a
-                      href="#konsultacja"
-                      className="btn-primary mt-7 !w-full !justify-center"
-                    >
-                      Wybierz termin
-                    </a>
-                  )}
-                </article>
-              ))}
-            </div>
-          </div>
-        </section>
-
-        {/* PROCES */}
-        <section id="proces" className="relative px-6 py-20 sm:px-8 lg:px-10">
-          <div className="mx-auto max-w-7xl">
-            <div className="grid gap-12 lg:grid-cols-[0.42fr_0.58fr]">
-              <div>
-                <span className="kicker">Proces</span>
-                <h2 className="display-tight mt-5 text-4xl font-medium leading-[1.02] text-foreground sm:text-5xl">
-                  Trzy kroki, zero ankiet, decyzja do podjęcia.
-                </h2>
-                <p className="mt-6 max-w-md text-sm leading-7 text-muted">
-                  Każda współpraca zaczyna się od krótkiej rozmowy. Bez prezentacji
-                  na 40 slajdów, bez ankiet na 12 stron. Spotykamy się, ustalamy
-                  cel, wychodzimy z konkretnym planem.
-                </p>
-              </div>
-
-              <ol className="relative space-y-4 border-l border-border pl-8">
-                {process.map((item) => (
-                  <li
-                    key={item.step}
-                    className="premium-panel relative rounded-2xl p-6"
-                  >
-                    <div className="absolute -left-[2.55rem] top-6 flex h-8 w-8 items-center justify-center rounded-full border border-fuchsia-200 bg-background-soft font-mono text-[0.7rem] font-medium text-fuchsia-700">
-                      {item.step}
-                    </div>
-                    <h3 className="text-lg font-semibold text-foreground">{item.name}</h3>
-                    <p className="mt-2 text-sm leading-7 text-muted">{item.text}</p>
-                  </li>
-                ))}
-              </ol>
-            </div>
-          </div>
-        </section>
-
         {/* KONSULTACJA — booking widget */}
         <section className="relative px-6 py-20 sm:px-8 lg:px-10">
           <div className="mx-auto max-w-7xl">
             <BookingWidget />
+          </div>
+        </section>
+
+        {/* PROJEKTY ⭐ MOCNY WOW */}
+        <section id="projekty" className="relative px-6 py-24 sm:px-8 lg:px-10">
+          <div className="mx-auto max-w-7xl">
+            <div className="flex flex-col gap-6 sm:flex-row sm:items-end sm:justify-between">
+              <div>
+                <span className="kicker">Projekty</span>
+                <h2 className="display-tight mt-5 max-w-3xl text-4xl font-medium leading-[1.02] text-foreground sm:text-5xl lg:text-6xl">
+                  Co Sylwia buduje poza pojedynczą sprzedażą.
+                </h2>
+                <p className="mt-6 max-w-2xl text-base leading-8 text-muted">
+                  Społeczność, agencja, edukacja. Trzy filary z których każdy żyje własnym
+                  rytmem, ale dzieli ten sam standard pracy z klientem premium.
+                </p>
+              </div>
+            </div>
+
+            <div className="mt-12">
+              <ProjectsGrid />
+            </div>
+          </div>
+        </section>
+
+        {/* SZKOLENIA / WYSTĄPIENIA */}
+        <section className="relative px-6 py-20 sm:px-8 lg:px-10">
+          <div className="mx-auto max-w-7xl">
+            <div className="premium-panel champagne-line rounded-[2.5rem] px-8 py-12 sm:px-12 lg:px-16">
+              <div className="grid gap-8 lg:grid-cols-[0.55fr_0.45fr] lg:items-center">
+                <div>
+                  <span className="kicker">Szkolenia i wystąpienia</span>
+                  <h2 className="display-tight mt-5 text-3xl font-medium leading-[1.05] text-foreground sm:text-4xl">
+                    Zaproś Sylwię na <span className="italic text-fuchsia-700">event branżowy</span>{" "}
+                    albo do swojego biura.
+                  </h2>
+                  <p className="mt-5 max-w-md text-sm leading-7 text-muted sm:text-base">
+                    Warsztaty zamknięte dla biur i społeczności agentów, wystąpienia eventowe,
+                    dłuższy mentoring dla osób budujących markę osobistą. Zakres i format
+                    ustalamy po krótkiej rozmowie.
+                  </p>
+                  <div className="mt-8 flex flex-col gap-3 sm:flex-row">
+                    <a
+                      href="mailto:sylwia@nieruchomoscispodlady.pl?subject=Szkolenie%20%2F%20wyst%C4%85pienie%20%E2%80%94%20zapytanie"
+                      className="btn-primary"
+                    >
+                      Napisz o szkolenie
+                    </a>
+                    <a href="tel:+48571309209" className="btn-secondary">
+                      +48 571 309 209
+                    </a>
+                  </div>
+                </div>
+
+                <div>
+                  <p className="kicker mb-4">Tematy</p>
+                  <ul className="space-y-3">
+                    {trainingTopics.map((topic) => (
+                      <li
+                        key={topic}
+                        className="flex items-start gap-3 text-sm leading-7 text-foreground-soft"
+                      >
+                        <span
+                          className="mt-2.5 h-px w-5 flex-shrink-0 bg-fuchsia-500"
+                          aria-hidden
+                        />
+                        <span>{topic}</span>
+                      </li>
+                    ))}
+                  </ul>
+                </div>
+              </div>
+            </div>
           </div>
         </section>
 
@@ -474,6 +405,28 @@ export default function Home() {
 
               <div className="premium-panel rounded-3xl px-8 py-2 sm:px-10">
                 <FAQAccordion items={faqItems} />
+              </div>
+            </div>
+          </div>
+        </section>
+
+        {/* NEWSLETTER NSL */}
+        <section className="relative px-6 py-20 sm:px-8 lg:px-10">
+          <div className="mx-auto max-w-7xl">
+            <div className="grid gap-12 lg:grid-cols-[0.45fr_0.55fr] lg:items-center">
+              <div>
+                <span className="kicker">Newsletter NSL</span>
+                <h2 className="display-tight mt-5 text-4xl font-medium leading-[1.02] text-foreground sm:text-5xl">
+                  Praktyczny update z rynku, raz w tygodniu.
+                </h2>
+                <p className="mt-6 max-w-md text-sm leading-7 text-muted sm:text-base">
+                  Lista mailowa Nieruchomości Spod Lady. Konkretne case'y, narzędzia,
+                  trendy z rynku off-market. Bez banałów, bez clickbaitu.
+                </p>
+              </div>
+
+              <div className="premium-panel champagne-line rounded-3xl p-8 sm:p-10">
+                <NewsletterForm />
               </div>
             </div>
           </div>
@@ -530,18 +483,10 @@ export default function Home() {
                 <div>
                   <p className="text-sm font-semibold text-foreground">Nawigacja</p>
                   <div className="mt-4 flex flex-col gap-2 text-sm text-muted">
-                    <a href="#oferta" className="hover:text-fuchsia-700">
-                      Oferta
-                    </a>
-                    <a href="#proces" className="hover:text-fuchsia-700">
-                      Proces
-                    </a>
-                    <a href="#konsultacja" className="hover:text-fuchsia-700">
-                      Konsultacja
-                    </a>
-                    <a href="#faq" className="hover:text-fuchsia-700">
-                      FAQ
-                    </a>
+                    <a href="#sylwia" className="hover:text-fuchsia-700">Sylwia</a>
+                    <a href="#konsultacja" className="hover:text-fuchsia-700">Konsultacja</a>
+                    <a href="#projekty" className="hover:text-fuchsia-700">Projekty</a>
+                    <a href="#faq" className="hover:text-fuchsia-700">FAQ</a>
                   </div>
                 </div>
 
