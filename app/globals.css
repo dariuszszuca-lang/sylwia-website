@@ -1,26 +1,455 @@
 @import "tailwindcss";
 
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
+  /* Bazowe — kremowe off-white + atramentowy tekst */
+  --background: #f8f5f0;
+  --background-soft: #fcfaf6;
+  --foreground: #15131c;
+  --foreground-soft: #2a2632;
+  --muted: #6b6571;
+  --muted-soft: #948e9a;
+
+  /* Powierzchnie szklane */
+  --surface: rgba(255, 253, 250, 0.72);
+  --surface-strong: rgba(255, 253, 250, 0.92);
+  --surface-warm: rgba(248, 245, 240, 0.6);
+
+  /* Hairlines i obramowania — ciepły grafit, nie różowy */
+  --border: rgba(21, 19, 28, 0.08);
+  --border-strong: rgba(21, 19, 28, 0.14);
+  --border-luxe: rgba(165, 134, 90, 0.22);
+
+  /* Champagne — luxe akcent */
+  --champagne-50: #f7f0e3;
+  --champagne-100: #ece0c8;
+  --champagne-200: #d9c4a0;
+  --champagne-300: #c0a472;
+  --champagne-400: #a58955;
+
+  /* Fuksja — głęboka, dojrzała magenta zamiast cukierkowej */
+  --fuchsia-50: #fdf2f8;
+  --fuchsia-100: #fce7f3;
+  --fuchsia-200: #f9c5dd;
+  --fuchsia-300: #f08fbb;
+  --fuchsia-400: #db5d97;
+  --fuchsia-500: #c43077;
+  --fuchsia-600: #a4205f;
+  --fuchsia-700: #82184c;
+  --fuchsia-800: #5a1136;
+  --fuchsia-900: #3d0c25;
+
+  /* Cienie — głębokie, ciepłe */
+  --shadow-soft: 0 12px 30px rgba(21, 19, 28, 0.06);
+  --shadow-md: 0 24px 60px rgba(21, 19, 28, 0.08);
+  --shadow-xl: 0 40px 100px rgba(21, 19, 28, 0.1);
+  --shadow-glow: 0 24px 80px rgba(196, 48, 119, 0.22);
 }
 
 @theme inline {
   --color-background: var(--background);
+  --color-background-soft: var(--background-soft);
   --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
+  --color-foreground-soft: var(--foreground-soft);
+  --color-surface: var(--surface);
+  --color-surface-strong: var(--surface-strong);
+  --color-surface-warm: var(--surface-warm);
+  --color-border: var(--border);
+  --color-border-strong: var(--border-strong);
+  --color-border-luxe: var(--border-luxe);
+  --color-muted: var(--muted);
+  --color-muted-soft: var(--muted-soft);
+
+  --color-champagne-50: var(--champagne-50);
+  --color-champagne-100: var(--champagne-100);
+  --color-champagne-200: var(--champagne-200);
+  --color-champagne-300: var(--champagne-300);
+  --color-champagne-400: var(--champagne-400);
+
+  --color-fuchsia-50: var(--fuchsia-50);
+  --color-fuchsia-100: var(--fuchsia-100);
+  --color-fuchsia-200: var(--fuchsia-200);
+  --color-fuchsia-300: var(--fuchsia-300);
+  --color-fuchsia-400: var(--fuchsia-400);
+  --color-fuchsia-500: var(--fuchsia-500);
+  --color-fuchsia-600: var(--fuchsia-600);
+  --color-fuchsia-700: var(--fuchsia-700);
+  --color-fuchsia-800: var(--fuchsia-800);
+  --color-fuchsia-900: var(--fuchsia-900);
+
+  --shadow-soft: var(--shadow-soft);
+  --shadow-md: var(--shadow-md);
+  --shadow-xl: var(--shadow-xl);
+  --shadow-glow: var(--shadow-glow);
+
+  --font-sans: var(--font-sans), "Inter", system-ui, -apple-system, "Segoe UI", sans-serif;
+  --font-display:
+    var(--font-display), "Fraunces", "Iowan Old Style", "Palatino Linotype", Georgia, serif;
+  --font-mono: var(--font-mono), ui-monospace, "SFMono-Regular", "Menlo", monospace;
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+* {
+  box-sizing: border-box;
+}
+
+::selection {
+  background: rgba(196, 48, 119, 0.18);
+  color: var(--foreground);
+}
+
+html {
+  scroll-behavior: smooth;
 }
 
 body {
-  background: var(--background);
+  min-height: 100vh;
+  background-color: var(--background);
+  background-image:
+    radial-gradient(circle at 8% 12%, rgba(196, 48, 119, 0.06), transparent 38%),
+    radial-gradient(circle at 92% 6%, rgba(192, 164, 114, 0.08), transparent 32%),
+    radial-gradient(circle at 50% 100%, rgba(196, 48, 119, 0.04), transparent 45%);
   color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: var(--font-sans);
+  font-feature-settings: "ss01", "cv11";
+  letter-spacing: -0.011em;
+}
+
+/* Typografia displayowa — Fraunces z opt-szn dla luxe feel */
+.display {
+  font-family: var(--font-display);
+  font-feature-settings: "ss01", "ss02";
+  font-variation-settings: "opsz" 144, "SOFT" 30;
+  letter-spacing: -0.025em;
+}
+
+.display-tight {
+  font-family: var(--font-display);
+  font-variation-settings: "opsz" 96, "SOFT" 50;
+  letter-spacing: -0.03em;
+}
+
+/* Tonalność — eyebrow / kicker */
+.kicker {
+  font-family: var(--font-mono);
+  font-size: 0.6875rem;
+  font-weight: 500;
+  letter-spacing: 0.32em;
+  text-transform: uppercase;
+  color: var(--muted);
+}
+
+/* Mikrointerakcje globalne */
+a,
+button,
+[role="button"] {
+  transition:
+    transform 240ms cubic-bezier(0.16, 1, 0.3, 1),
+    opacity 200ms ease,
+    background-color 200ms ease,
+    border-color 200ms ease,
+    color 200ms ease,
+    box-shadow 240ms ease;
+}
+
+a:focus-visible,
+button:focus-visible,
+[role="button"]:focus-visible,
+input:focus-visible,
+textarea:focus-visible,
+select:focus-visible,
+summary:focus-visible {
+  outline: 2px solid var(--fuchsia-500);
+  outline-offset: 3px;
+  border-radius: 999px;
+}
+
+/* Premium glass — ciepły szklany panel */
+.glass {
+  background:
+    linear-gradient(180deg, rgba(255, 253, 250, 0.84), rgba(255, 253, 250, 0.62));
+  border: 1px solid var(--border);
+  box-shadow: var(--shadow-soft);
+  backdrop-filter: blur(28px) saturate(140%);
+  -webkit-backdrop-filter: blur(28px) saturate(140%);
+}
+
+.glass-strong {
+  background:
+    linear-gradient(180deg, rgba(255, 253, 250, 0.92), rgba(255, 253, 250, 0.78));
+  border: 1px solid var(--border-strong);
+  box-shadow: var(--shadow-md);
+  backdrop-filter: blur(32px) saturate(150%);
+  -webkit-backdrop-filter: blur(32px) saturate(150%);
+}
+
+/* Premium panel z hairline + szlachetne podświetlenie */
+.premium-panel {
+  position: relative;
+  background:
+    linear-gradient(180deg, rgba(255, 253, 250, 0.86), rgba(252, 250, 246, 0.6));
+  border: 1px solid var(--border);
+  box-shadow: var(--shadow-soft);
+  backdrop-filter: blur(24px);
+  -webkit-backdrop-filter: blur(24px);
+  overflow: hidden;
+}
+
+.premium-panel::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  border-radius: inherit;
+  background: linear-gradient(
+    135deg,
+    rgba(255, 255, 255, 0.55) 0%,
+    transparent 28%,
+    transparent 72%,
+    rgba(217, 196, 160, 0.08) 100%
+  );
+}
+
+/* Champagne hairline — luxe top border na karty */
+.champagne-line {
+  position: relative;
+}
+
+.champagne-line::before {
+  content: "";
+  position: absolute;
+  left: 1.5rem;
+  right: 1.5rem;
+  top: 0;
+  height: 1px;
+  background: linear-gradient(
+    90deg,
+    transparent,
+    rgba(192, 164, 114, 0.4),
+    rgba(196, 48, 119, 0.3),
+    rgba(192, 164, 114, 0.4),
+    transparent
+  );
+}
+
+/* Magnetyczny CTA — głęboka magenta z subtelnym glow */
+.btn-primary {
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  padding: 0.95rem 1.75rem;
+  border-radius: 999px;
+  background: linear-gradient(135deg, #c43077 0%, #a4205f 60%, #82184c 100%);
+  color: #fff;
+  font-size: 0.875rem;
+  font-weight: 600;
+  letter-spacing: 0.005em;
+  box-shadow:
+    0 1px 0 rgba(255, 255, 255, 0.25) inset,
+    0 -1px 0 rgba(0, 0, 0, 0.18) inset,
+    0 18px 40px -10px rgba(196, 48, 119, 0.5),
+    0 4px 12px rgba(21, 19, 28, 0.12);
+}
+
+.btn-primary::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  border-radius: inherit;
+  background: linear-gradient(
+    180deg,
+    rgba(255, 255, 255, 0.18),
+    rgba(255, 255, 255, 0) 50%
+  );
+  pointer-events: none;
+}
+
+.btn-primary:hover {
+  transform: translateY(-2px);
+  box-shadow:
+    0 1px 0 rgba(255, 255, 255, 0.3) inset,
+    0 -1px 0 rgba(0, 0, 0, 0.18) inset,
+    0 24px 60px -12px rgba(196, 48, 119, 0.6),
+    0 6px 16px rgba(21, 19, 28, 0.14);
+}
+
+.btn-primary:active {
+  transform: translateY(0);
+}
+
+.btn-secondary {
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  padding: 0.95rem 1.75rem;
+  border-radius: 999px;
+  background: rgba(255, 253, 250, 0.7);
+  color: var(--foreground);
+  font-size: 0.875rem;
+  font-weight: 600;
+  border: 1px solid var(--border-strong);
+  backdrop-filter: blur(18px);
+  -webkit-backdrop-filter: blur(18px);
+}
+
+.btn-secondary:hover {
+  border-color: var(--fuchsia-300);
+  background: rgba(255, 253, 250, 0.9);
+  transform: translateY(-1px);
+}
+
+/* Reveal on scroll — używa scroll-driven animation gdzie wspierane */
+.reveal {
+  opacity: 0;
+  transform: translateY(28px);
+  animation: reveal 1s cubic-bezier(0.16, 1, 0.3, 1) both;
+  animation-delay: var(--reveal-delay, 0ms);
+}
+
+@keyframes reveal {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@supports (animation-timeline: view()) {
+  .reveal-on-view {
+    opacity: 0;
+    transform: translateY(36px);
+    animation: reveal-view linear both;
+    animation-timeline: view();
+    animation-range: entry 0% cover 30%;
+  }
+
+  @keyframes reveal-view {
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+}
+
+/* Marquee dla trust ribbon (jeśli się przyda) */
+@keyframes marquee {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(-50%);
+  }
+}
+
+.marquee {
+  animation: marquee 40s linear infinite;
+}
+
+/* Accordion (details/summary) premium */
+details.faq-item {
+  border-bottom: 1px solid var(--border);
+  padding: 1.5rem 0;
+}
+
+details.faq-item[open] summary .faq-icon {
+  transform: rotate(45deg);
+}
+
+details.faq-item summary {
+  list-style: none;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+  padding: 0;
+  user-select: none;
+}
+
+details.faq-item summary::-webkit-details-marker {
+  display: none;
+}
+
+.faq-icon {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 2rem;
+  height: 2rem;
+  border-radius: 999px;
+  border: 1px solid var(--border-strong);
+  color: var(--foreground);
+  transition: transform 280ms cubic-bezier(0.16, 1, 0.3, 1);
+  flex-shrink: 0;
+}
+
+.faq-content {
+  margin-top: 1rem;
+  color: var(--muted);
+  line-height: 1.75;
+  font-size: 0.95rem;
+  max-width: 65ch;
+}
+
+/* Subtle noise texture — luxe paper feel */
+.noise {
+  position: relative;
+}
+
+.noise::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 200 200'><filter id='n'><feTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='2' stitchTiles='stitch'/><feColorMatrix values='0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.06 0'/></filter><rect width='100%25' height='100%25' filter='url(%23n)'/></svg>");
+  mix-blend-mode: multiply;
+  opacity: 0.5;
+  border-radius: inherit;
+}
+
+/* Image — premium frame */
+.portrait-frame {
+  position: relative;
+  border-radius: 2.25rem;
+  overflow: hidden;
+  isolation: isolate;
+  background:
+    radial-gradient(circle at 30% 20%, rgba(255, 220, 235, 0.6), transparent 50%),
+    linear-gradient(180deg, #fdf3f0 0%, #f7e8e2 100%);
+  box-shadow:
+    0 1px 0 rgba(255, 255, 255, 0.6) inset,
+    0 40px 100px rgba(21, 19, 28, 0.18);
+}
+
+.portrait-frame::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  border-radius: inherit;
+  border: 1px solid rgba(217, 196, 160, 0.4);
+  pointer-events: none;
+}
+
+/* Reduced motion */
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+
+  .reveal,
+  .reveal-on-view,
+  .marquee {
+    animation: none;
+    opacity: 1;
+    transform: none;
+  }
+
+  *,
+  *::before,
+  *::after {
+    transition-duration: 0.01ms !important;
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+  }
 }
