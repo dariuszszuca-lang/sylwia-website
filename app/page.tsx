@@ -215,14 +215,14 @@ export default function Home() {
               {/* Portret */}
               <div className="reveal" style={{ ["--reveal-delay" as string]: "150ms" }}>
                 <div className="relative ml-auto max-w-[34rem]">
-                  <div className="portrait-frame aspect-[4/5] w-full">
+                  <div className="portrait-frame aspect-[3/4] w-full">
                     <Image
                       src="/images/sylwia-wroblewska.jpg"
                       alt="Sylwia Wróblewska"
                       fill
                       priority
                       sizes="(min-width: 1024px) 34rem, (min-width: 640px) 60vw, 100vw"
-                      className="object-cover object-center"
+                      className="object-cover object-top"
                     />
                   </div>
 
