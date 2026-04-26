@@ -90,7 +90,9 @@ export function SiteHeader() {
             onClick={() => setMenuOpen(false)}
           >
             <BrandMark size={36} className="brand-mark-header" />
-            <span className="brand-name">Sylwia Wróblewska</span>
+            <span className="brand-name hidden min-[480px]:inline-block">
+              Sylwia Wróblewska
+            </span>
           </a>
 
           <nav aria-label="Główna nawigacja" className="hidden items-center gap-1 md:flex">
@@ -116,7 +118,7 @@ export function SiteHeader() {
 
           <button
             type="button"
-            className="hamburger md:hidden"
+            className="hamburger inline-flex md:hidden"
             aria-label={menuOpen ? "Zamknij menu" : "Otwórz menu"}
             aria-expanded={menuOpen}
             aria-controls="mobile-nav"
@@ -156,7 +158,7 @@ export function SiteHeader() {
             <a
               href="#konsultacja"
               onClick={() => setMenuOpen(false)}
-              className="btn-luxe mobile-nav-cta"
+              className="btn-luxe inline-flex mobile-nav-cta"
             >
               Umów konsultację · 300 zł / h
             </a>

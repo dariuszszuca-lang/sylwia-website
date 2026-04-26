@@ -475,7 +475,7 @@ export default function Home() {
                 <div>
                   <div className="flex items-center gap-3">
                     <BrandMark size={40} />
-                    <span className="brand-name !inline-block">Sylwia Wróblewska</span>
+                    <span className="brand-name inline-block">Sylwia Wróblewska</span>
                   </div>
                   <p className="mt-5 max-w-md text-sm leading-7 text-muted">
                     Sprzedaż nieruchomości premium, konsultacje strategiczne i
