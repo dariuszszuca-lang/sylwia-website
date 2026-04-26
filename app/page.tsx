@@ -168,7 +168,7 @@ export default function Home() {
         </div>
 
         {/* HERO — Sylwia jako osoba */}
-        <section id="sylwia" className="relative px-6 pt-12 pb-16 sm:px-8 sm:pt-16 lg:px-10 lg:pt-24">
+        <section id="sylwia" className="relative px-6 pt-12 pb-16 sm:px-8 sm:pt-16 lg:px-10 lg:pt-24 scroll-mt-24">
           <div className="mx-auto max-w-7xl">
             <div className="grid gap-10 lg:grid-cols-[1.05fr_0.95fr] lg:items-end">
               <div className="reveal">
@@ -296,14 +296,14 @@ export default function Home() {
         </section>
 
         {/* KONSULTACJA — booking widget */}
-        <section className="relative px-6 py-20 sm:px-8 lg:px-10">
+        <section id="konsultacja" className="relative px-6 py-20 sm:px-8 lg:px-10 scroll-mt-24">
           <div className="mx-auto max-w-7xl">
             <BookingWidget />
           </div>
         </section>
 
         {/* PROJEKTY ⭐ MOCNY WOW */}
-        <section id="projekty" className="relative px-6 py-24 sm:px-8 lg:px-10">
+        <section id="projekty" className="relative px-6 py-24 sm:px-8 lg:px-10 scroll-mt-24">
           <div className="mx-auto max-w-7xl">
             <div className="flex flex-col gap-6 sm:flex-row sm:items-end sm:justify-between">
               <div>
@@ -376,7 +376,7 @@ export default function Home() {
         </section>
 
         {/* FAQ */}
-        <section id="faq" className="relative px-6 py-20 sm:px-8 lg:px-10">
+        <section id="faq" className="relative px-6 py-20 sm:px-8 lg:px-10 scroll-mt-24">
           <div className="mx-auto max-w-7xl">
             <div className="grid gap-12 lg:grid-cols-[0.4fr_0.6fr]">
               <div>
