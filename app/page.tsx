@@ -26,7 +26,7 @@ const differentiators = [
   },
   {
     title: "Komunikacja premium",
-    text: "Język spójny z marką klienta. Skraca dystans do decyzji i buduje zaufanie po jednej rozmowie.",
+    text: "Język spójny z marką klienta. Skraca dystans i buduje zaufanie.",
   },
 ];
 
@@ -183,7 +183,7 @@ export default function Home() {
                   <span className="text-foreground-soft">Strategia.</span>
                   <br />
                   <span className="bg-gradient-to-br from-fuchsia-700 via-fuchsia-600 to-champagne-400 bg-clip-text text-transparent">
-                    Reputacja.
+                    Doświadczenie.
                   </span>
                 </h1>
 
@@ -276,8 +276,8 @@ export default function Home() {
                 Sylwia od ponad 15 lat pracuje na rynku nieruchomości i jest
                 założycielką Nieruchomości Spod Lady. Łączy dyskrecję, strategiczne
                 podejście do sprzedaży i wysokie standardy pracy z klientem premium.
-                Jej praca to nie sprintowa konwersja, lecz długi horyzont relacji,
-                w której obie strony robią dobry biznes.
+                Pracuje na relację, nie na pojedynczą prowizję. Każda transakcja ma
+                być dobra dla obu stron.
               </p>
             </div>
 
@@ -421,7 +421,7 @@ export default function Home() {
                 </h2>
                 <p className="mt-6 max-w-md text-sm leading-7 text-muted sm:text-base">
                   Lista mailowa Nieruchomości Spod Lady. Konkretne case'y, narzędzia,
-                  trendy z rynku off-market. Bez banałów, bez clickbaitu.
+                  trendy z rynku off-market. Bez banałów.
                 </p>
               </div>
 

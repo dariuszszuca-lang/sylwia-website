@@ -46,7 +46,7 @@ export function BookingWidget() {
           <span className="kicker">Konsultacja 1:1</span>
 
           <h2 className="display-tight mt-5 text-4xl font-medium leading-[0.98] text-foreground sm:text-5xl">
-            Godzina konkretu, która oszczędza miesiące błądzenia.
+            Godzina konsultacji, która wskazuje kierunek dalszych działań.
           </h2>
 
           <p className="mt-6 max-w-md text-[0.95rem] leading-7 text-muted">
