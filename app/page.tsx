@@ -80,7 +80,7 @@ const jsonLd = {
       jobTitle: "Pośredniczka nieruchomości, konsultantka i trenerka branży nieruchomości",
       description:
         "Sylwia Wróblewska — pośredniczka nieruchomości z Trójmiasta, założycielka Nieruchomości Spod Lady, twórczyni Akademii AI w Nieruchomościach (z Dariuszem Szucą).",
-      image: "https://sylwiawroblewska.pl/images/sylwia-wroblewska.png",
+      image: "https://sylwiawroblewska.pl/images/sylwia-wroblewska.jpg",
       url: "https://sylwiawroblewska.pl",
       email: "mailto:sylwia@nieruchomoscispodlady.pl",
       telephone: "+48571309209",
@@ -110,7 +110,7 @@ const jsonLd = {
       "@id": "https://sylwiawroblewska.pl/#service",
       name: "Sylwia Wróblewska — konsultacje i szkolenia",
       url: "https://sylwiawroblewska.pl",
-      image: "https://sylwiawroblewska.pl/images/sylwia-wroblewska.png",
+      image: "https://sylwiawroblewska.pl/images/sylwia-wroblewska.jpg",
       description:
         "Konsultacje 1:1 i szkolenia dla branży nieruchomości w Trójmieście i online. Założycielka Nieruchomości Spod Lady.",
       areaServed: ["Trójmiasto", "Polska"],
@@ -217,7 +217,7 @@ export default function Home() {
                 <div className="relative ml-auto max-w-[34rem]">
                   <div className="portrait-frame aspect-[4/5] w-full">
                     <Image
-                      src="/images/sylwia-wroblewska.png"
+                      src="/images/sylwia-wroblewska.jpg"
                       alt="Sylwia Wróblewska"
                       fill
                       priority

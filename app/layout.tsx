@@ -50,7 +50,7 @@ export const metadata: Metadata = {
     type: "website",
     images: [
       {
-        url: "/images/sylwia-wroblewska.png",
+        url: "/images/sylwia-wroblewska.jpg",
         width: 500,
         height: 500,
         alt: "Sylwia Wróblewska",
@@ -62,7 +62,7 @@ export const metadata: Metadata = {
     title: "Sylwia Wróblewska | Konsultacje i strategia nieruchomości",
     description:
       "Butikowa marka osobista dla klientów premium i pośredników, którzy chcą działać skuteczniej.",
-    images: ["/images/sylwia-wroblewska.png"],
+    images: ["/images/sylwia-wroblewska.jpg"],
   },
   robots: {
     index: true,
