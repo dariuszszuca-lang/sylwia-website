@@ -177,7 +177,7 @@ export default function Home() {
                   Marka osobista · rynek premium
                 </div>
 
-                <h1 className="display mt-7 text-[3.5rem] leading-[0.92] font-medium text-foreground sm:text-[4.75rem] lg:text-[6.25rem]">
+                <h1 className="display mt-7 text-[2.5rem] leading-[0.95] font-medium text-foreground sm:text-[4rem] sm:leading-[0.92] lg:text-[6.25rem]">
                   Sprzedaż.
                   <br />
                   <span className="text-foreground-soft">Strategia.</span>
@@ -472,8 +472,13 @@ export default function Home() {
             <div className="premium-panel rounded-3xl px-7 py-9 sm:px-10">
               <div className="grid gap-10 lg:grid-cols-[1.1fr_0.9fr_0.8fr]">
                 <div>
-                  <p className="kicker">Sylwia Wróblewska</p>
-                  <p className="mt-4 max-w-md text-sm leading-7 text-muted">
+                  <div className="flex items-center gap-3">
+                    <span className="brand-orb" aria-hidden>
+                      <span className="brand-orb-letters">SW</span>
+                    </span>
+                    <span className="brand-name !inline-block">Sylwia Wróblewska</span>
+                  </div>
+                  <p className="mt-5 max-w-md text-sm leading-7 text-muted">
                     Sprzedaż nieruchomości premium, konsultacje strategiczne i
                     szkolenia dla branży nieruchomości w Trójmieście i online.
                     Założycielka Nieruchomości Spod Lady.

@@ -1,5 +1,5 @@
 import type { Metadata, Viewport } from "next";
-import { Fraunces, Inter, Geist_Mono } from "next/font/google";
+import { Fraunces, Sora, Geist_Mono } from "next/font/google";
 import "./globals.css";
 
 const display = Fraunces({
@@ -9,9 +9,10 @@ const display = Fraunces({
   display: "swap",
 });
 
-const sans = Inter({
+const sans = Sora({
   variable: "--font-sans",
   subsets: ["latin", "latin-ext"],
+  weight: ["300", "400", "500", "600", "700"],
   display: "swap",
 });
 

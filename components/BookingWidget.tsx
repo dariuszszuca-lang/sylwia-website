@@ -79,19 +79,6 @@ export function BookingWidget() {
               ))}
             </ul>
           </div>
-
-          {/* Proces — 3 kroki */}
-          <div className="mt-10 grid gap-3">
-            {STEPS.map((step) => (
-              <div
-                key={step.n}
-                className="flex items-center gap-4 rounded-2xl border border-border bg-background-soft/60 px-5 py-4"
-              >
-                <span className="font-mono text-xs font-medium text-fuchsia-700">{step.n}</span>
-                <span className="text-sm text-foreground-soft">{step.text}</span>
-              </div>
-            ))}
-          </div>
         </div>
 
         {/* Prawa kolumna — kalendarz */}
@@ -141,6 +128,24 @@ export function BookingWidget() {
             Płatność po potwierdzeniu terminu, przelewem lub Stripe link.
             Spotkanie online (Google Meet) lub stacjonarnie w Trójmieście.
           </p>
+        </div>
+      </div>
+
+      {/* Proces — 3 kroki w pełnej szerokości */}
+      <div className="mt-12 border-t border-border-luxe/40 pt-10">
+        <p className="kicker text-center sm:text-left">Jak to wygląda</p>
+        <div className="mt-5 grid gap-4 md:grid-cols-3">
+          {STEPS.map((step) => (
+            <div
+              key={step.n}
+              className="flex items-start gap-4 rounded-2xl border border-border bg-background-soft/60 px-5 py-5"
+            >
+              <span className="font-mono text-xs font-medium text-fuchsia-700 mt-0.5">
+                {step.n}
+              </span>
+              <span className="text-sm leading-6 text-foreground-soft">{step.text}</span>
+            </div>
+          ))}
         </div>
       </div>
     </div>
