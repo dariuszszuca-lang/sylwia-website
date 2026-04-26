@@ -1,6 +1,7 @@
 "use client";
 
 import { useEffect, useState } from "react";
+import { BrandMark } from "./BrandMark";
 
 const NAV = [
   { href: "#sylwia", id: "sylwia", label: "Sylwia" },
@@ -88,9 +89,7 @@ export function SiteHeader() {
             aria-label="Sylwia Wróblewska — strona główna"
             onClick={() => setMenuOpen(false)}
           >
-            <span className="brand-orb" aria-hidden>
-              <span className="brand-orb-letters">SW</span>
-            </span>
+            <BrandMark size={36} className="brand-mark-header" />
             <span className="brand-name">Sylwia Wróblewska</span>
           </a>
 

@@ -4,6 +4,7 @@ import { SiteHeader } from "@/components/SiteHeader";
 import { FAQAccordion } from "@/components/FAQAccordion";
 import { ProjectsGrid } from "@/components/ProjectsGrid";
 import { NewsletterForm } from "@/components/NewsletterForm";
+import { BrandMark } from "@/components/BrandMark";
 
 const metrics = [
   { value: "15+", label: "lat praktyki na rynku nieruchomości" },
@@ -473,9 +474,7 @@ export default function Home() {
               <div className="grid gap-10 lg:grid-cols-[1.1fr_0.9fr_0.8fr]">
                 <div>
                   <div className="flex items-center gap-3">
-                    <span className="brand-orb" aria-hidden>
-                      <span className="brand-orb-letters">SW</span>
-                    </span>
+                    <BrandMark size={40} />
                     <span className="brand-name !inline-block">Sylwia Wróblewska</span>
                   </div>
                   <p className="mt-5 max-w-md text-sm leading-7 text-muted">
