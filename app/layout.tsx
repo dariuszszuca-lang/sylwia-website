@@ -1,6 +1,7 @@
 import type { Metadata, Viewport } from "next";
 import { Fraunces, Sora, Geist_Mono } from "next/font/google";
 import "./globals.css";
+import UpdateBanner from "@/components/UpdateBanner";
 
 const display = Fraunces({
   variable: "--font-display",
@@ -98,7 +99,10 @@ export default function RootLayout({
       lang="pl"
       className={`${display.variable} ${sans.variable} ${mono.variable} h-full antialiased`}
     >
-      <body className="min-h-full flex flex-col">{children}</body>
+      <body className="min-h-full flex flex-col">
+        <UpdateBanner />
+        {children}
+      </body>
     </html>
   );
 }
