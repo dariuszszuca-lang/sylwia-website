@@ -483,7 +483,7 @@ export default function Home() {
                 Najczęstsze <span className="italic text-fuchsia-700">pytania.</span>
               </h2>
               <p className="mx-auto mt-6 max-w-md text-base leading-7 text-muted">
-                Nie znalazłaś odpowiedzi? Napisz na <a href="mailto:swroblewska@domhunter.pl" className="text-foreground underline decoration-fuchsia-400 underline-offset-4 hover:text-fuchsia-700">swroblewska@domhunter.pl</a> albo zadzwoń bezpośrednio.
+                Nie znalazłaś odpowiedzi? Napisz na <a href="mailto:swroblewska@domhunter.pl" className="text-foreground underline decoration-fuchsia-400 underline-offset-4 hover:text-fuchsia-700">swroblewska@domhunter.pl</a> albo zadzwoń.
               </p>
             </div>
 
@@ -540,7 +540,7 @@ export default function Home() {
               <div className="relative">
                 <span className="kicker">Kontakt</span>
                 <h2 className="display mx-auto mt-5 max-w-3xl text-4xl leading-[1.02] font-medium text-foreground sm:text-5xl lg:text-6xl">
-                  Napisz albo zadzwoń bezpośrednio.
+                  Napisz albo zadzwoń.
                 </h2>
 
                 <div className="mt-10 flex flex-col items-center justify-center gap-3 sm:flex-row">
