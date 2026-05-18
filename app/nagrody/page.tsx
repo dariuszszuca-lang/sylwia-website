@@ -75,7 +75,7 @@ export default function NagrodyPage() {
             </div>
             <div className="text-base leading-8 text-muted sm:text-lg space-y-4">
               <p>
-                To wyróżnienie dla całej społeczności Nieruchomości Spod Lady. Dla 20 000 pośredników,
+                To wyróżnienie dla całej społeczności Nieruchomości Spod Lady. Dla 2 000 pośredników,
                 którzy każdego dnia pokazują, że agent nieruchomości to przewodnik, zaufany partner,
                 nie zbędne ogniwo.
               </p>

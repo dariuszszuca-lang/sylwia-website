@@ -8,7 +8,7 @@ import { CategoryCircles } from "@/components/CategoryCircles";
 
 const metrics = [
   { value: "17", label: "lat praktyki na rynku nieruchomości" },
-  { value: "20 000", label: "agentów NSL w 8 regionach Polski" },
+  { value: "2 000", label: "agentów NSL w 8 regionach Polski" },
   { value: "18311", label: "numer licencji zawodowej" },
 ];
 
@@ -26,7 +26,7 @@ const faqItems = [
   {
     question: "Czym jest Nieruchomości Spod Lady?",
     answer:
-      "To ogólnopolska społeczność 20 000 zweryfikowanych pośredników nieruchomości w 8 regionach Polski. Agenci NSL jako pierwsi dowiadują się o nieruchomościach, które nigdy nie trafią na portale, i razem zamykają transakcje, które solo byłyby niemożliwe. Jestem założycielką i liderem tej społeczności. W 2025 roku NSL otrzymało tytuł Pioniera Etycznego Rynku Nieruchomości Off Market od Businesswoman & Life.",
+      "To ogólnopolska społeczność 2 000 zweryfikowanych pośredników nieruchomości w 8 regionach Polski. Agenci NSL jako pierwsi dowiadują się o nieruchomościach, które nigdy nie trafią na portale, i razem zamykają transakcje, które solo byłyby niemożliwe. Jestem założycielką i liderem tej społeczności. W 2025 roku NSL otrzymało tytuł Pioniera Etycznego Rynku Nieruchomości Off Market od Businesswoman & Life.",
   },
   {
     question: "Czy prowadzę szkolenia dla biur i grup agentów?",
@@ -49,7 +49,7 @@ const jsonLd = {
       name: "Sylwia Paulina Wróblewska",
       jobTitle: "Pośredniczka nieruchomości, inwestorka, trenerka",
       description:
-        "Sylwia Wróblewska, pośrednik nieruchomości, przedsiębiorca, inwestor. Właścicielka biura Dom Hunter w Gdańsku. Założycielka Nieruchomości Spod Lady (20 000 agentów w 8 regionach Polski). Laureatka nagrody Pionier Etycznego Rynku Nieruchomości Off Market 2025, Businesswoman & Life.",
+        "Sylwia Wróblewska, pośrednik nieruchomości, przedsiębiorca, inwestor. Właścicielka biura Dom Hunter w Gdańsku. Założycielka Nieruchomości Spod Lady (2 000 agentów w 8 regionach Polski). Laureatka nagrody Pionier Etycznego Rynku Nieruchomości Off Market 2025, Businesswoman & Life.",
       image: "https://sylwiawroblewska.pl/images/sylwia-wroblewska.jpg",
       url: "https://sylwiawroblewska.pl",
       email: "mailto:swroblewska@domhunter.pl",
@@ -137,7 +137,7 @@ export default function Home() {
                   Pośrednik nieruchomości · Przedsiębiorca · Inwestor · Właścicielka biura{" "}
                   <strong className="font-semibold text-foreground-soft">Dom Hunter</strong> w Gdańsku ·
                   Założycielka <strong className="font-semibold text-foreground-soft">Nieruchomości Spod Lady®</strong>{" "}
-                  (20 000 agentów w 8 regionach Polski).
+                  (2 000 agentów w 8 regionach Polski).
                 </p>
                 <p className="mt-3 max-w-xl font-mono text-xs uppercase tracking-[0.18em] text-muted-soft">
                   Licencja zawodowa nr 18 311

@@ -4,7 +4,7 @@ import { SubpageLayout } from "@/components/SubpageLayout";
 export const metadata = {
   title: "Nieruchomości Spod Lady · Sylwia Wróblewska",
   description:
-    "Największa społeczność współpracujących agentów nieruchomości w Polsce, 20 000 zweryfikowanych pośredników w 8 regionach kraju. Rynek off-market, oferty na wyłączność. Laureatka nagrody Pionier Etycznego Rynku Off Market 2025, Businesswoman & Life.",
+    "Największa społeczność współpracujących agentów nieruchomości w Polsce, 2 000 zweryfikowanych pośredników w 8 regionach kraju. Rynek off-market, oferty na wyłączność. Laureatka nagrody Pionier Etycznego Rynku Off Market 2025, Businesswoman & Life.",
 };
 
 const wartosci = [
@@ -54,7 +54,7 @@ export default function NSLPage() {
           <div className="premium-panel champagne-line rounded-[2rem] p-8 sm:p-12">
             <div className="grid gap-10 lg:grid-cols-[0.4fr_0.6fr] lg:items-center">
               <div className="text-center lg:text-left">
-                <div className="big-num fuchsia">20 000</div>
+                <div className="big-num fuchsia">2 000</div>
                 <p className="kicker mt-3">Pośredników w 8 regionach Polski</p>
               </div>
               <div className="text-base leading-7 text-muted sm:text-lg">
@@ -90,7 +90,7 @@ export default function NSLPage() {
               z Trójmiasta, którzy chcieli wymieniać się ofertami dyskretnie i sprawnie.
             </p>
             <p className="text-base leading-7 text-muted sm:text-lg">
-              Dziś to ogólnopolska społeczność 20 000 zweryfikowanych pośredników w 8 regionach
+              Dziś to ogólnopolska społeczność 2 000 zweryfikowanych pośredników w 8 regionach
               Polski. Agenci NSL jako pierwsi w kraju dowiadują się o nieruchomościach, które nigdy
               nie trafią na portale, i razem zamykają transakcje, które solo byłyby niemożliwe.
             </p>
