@@ -15,29 +15,29 @@ const metrics = [
 
 const faqItems = [
   {
-    question: "Jak wygląda współpraca z Sylwią?",
+    question: "Jak wygląda współpraca ze mną?",
     answer:
-      "Każda współpraca zaczyna się od krótkiej rozmowy, w której ustalamy zakres i tempo działania. Sylwia pracuje na relację, nie na pojedynczą transakcję.",
+      "Każda współpraca zaczyna się od krótkiej rozmowy, w której ustalamy zakres i tempo działania. Pracuję na relację, nie na pojedynczą transakcję.",
   },
   {
-    question: "Czy Sylwia obsługuje całą Polskę, czy tylko Trójmiasto?",
+    question: "Czy obsługuję całą Polskę, czy tylko Trójmiasto?",
     answer:
-      "Pośrednictwo i butikowe biuro Dom Hunter to przede wszystkim Trójmiasto. Szkolenia, mentoring i wystąpienia odbywają się w całej Polsce, online i stacjonarnie.",
+      "Pośrednictwo i butikowe biuro Dom Hunter prowadzę przede wszystkim w Trójmieście. Szkolenia, mentoring i wystąpienia robię w całej Polsce, online i stacjonarnie.",
   },
   {
     question: "Czym jest Nieruchomości Spod Lady?",
     answer:
-      "To zamknięta społeczność ponad 1 600 pośredników nieruchomości w Polsce. Wymieniamy się ofertami off-market, zamykamy transakcje wspólnie, dzielimy się wiedzą. Sylwia jest założycielką tej społeczności.",
+      "To zamknięta społeczność ponad 1 600 pośredników nieruchomości w Polsce. Wymieniamy się ofertami off-market, zamykamy transakcje wspólnie, dzielimy się wiedzą. Jestem założycielką tej społeczności.",
   },
   {
-    question: "Czy Sylwia prowadzi szkolenia dla biur i grup agentów?",
+    question: "Czy prowadzę szkolenia dla biur i grup agentów?",
     answer:
-      "Tak. Warsztaty autorskie odbywają się w grupach od 8 do 30 osób, formaty zamknięte dla biur i otwarte dla społeczności agentów. Napisz mailem o terminach.",
+      "Tak. Warsztaty autorskie prowadzę w grupach od 8 do 30 osób, formaty zamknięte dla biur i otwarte dla społeczności agentów. Napisz mailem o terminach.",
   },
   {
-    question: "Jak skontaktować się z Sylwią?",
+    question: "Jak się ze mną skontaktować?",
     answer:
-      "Bezpośrednio telefonem (+48 571 309 209) lub mailem (sylwia@nieruchomoscispodlady.pl). Sylwia odpisuje sama, bez asystentów i automatów.",
+      "Bezpośrednio telefonem (+48 571 309 209) lub mailem (sylwia@nieruchomoscispodlady.pl). Odpisuję sama, bez asystentów i automatów.",
   },
 ];
 
