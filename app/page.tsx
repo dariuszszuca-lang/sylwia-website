@@ -302,6 +302,68 @@ export default function Home() {
           </div>
         </section>
 
+        {/* ========== INWESTOWANIE (z perspektywy inwestora) ========== */}
+        <section className="relative px-6 py-20 sm:px-8 lg:px-10">
+          <div className="mx-auto max-w-7xl">
+            <div className="premium-panel champagne-line rounded-[2.5rem] px-8 py-14 sm:px-12 lg:px-16">
+              <div className="grid gap-12 lg:grid-cols-[0.45fr_0.55fr] lg:items-start">
+                <div>
+                  <span className="kicker">Z perspektywy inwestora</span>
+                  <h2 className="display-tight mt-5 text-4xl font-medium leading-[1.02] text-foreground sm:text-5xl">
+                    Wybór mieszkania to nie tylko{" "}
+                    <span className="italic text-fuchsia-700">cena za metr.</span>
+                  </h2>
+                  <p className="mt-6 max-w-lg text-base leading-7 text-muted sm:text-lg">
+                    Sama inwestuję i jestem przedsiębiorcą. Wiem co liczyć i co przeoczyć łatwo, jeśli
+                    patrzysz tylko na ofertę z portalu.
+                  </p>
+                  <Link
+                    href="/inwestowanie"
+                    className="mt-8 inline-flex items-center gap-2 text-sm font-medium text-foreground hover:text-fuchsia-700 group"
+                  >
+                    Zobacz więcej o inwestowaniu{" "}
+                    <span className="transition-transform group-hover:translate-x-1" aria-hidden>→</span>
+                  </Link>
+                </div>
+
+                <div className="grid gap-4 sm:grid-cols-3">
+                  {[
+                    {
+                      label: "Pod wynajem",
+                      text: "Długoterminowy, krótkoterminowy, instytucjonalny.",
+                    },
+                    {
+                      label: "Pod flip",
+                      text: "Lokale do remontu, podziału, zmiany funkcji.",
+                    },
+                    {
+                      label: "Pod portfel",
+                      text: "Budowa portfela nieruchomości w Trójmieście.",
+                    },
+                  ].map((t) => (
+                    <div
+                      key={t.label}
+                      className="rounded-2xl border border-border bg-background-soft/60 p-5"
+                    >
+                      <p className="kicker text-fuchsia-700">{t.label}</p>
+                      <p className="mt-3 text-sm leading-6 text-foreground-soft">{t.text}</p>
+                    </div>
+                  ))}
+                </div>
+              </div>
+
+              <div className="mt-10 border-t border-gold-line pt-8">
+                <p className="text-sm leading-7 text-muted sm:text-base">
+                  Lokalizacja, plan miejscowy, stan prawny, potencjał najmu, koszty utrzymania,
+                  perspektywy dzielnicy, otoczenie deweloperskie. Pomagam to wszystko przeliczyć
+                  przed decyzją, korzystając z bazy klientów i ofert dostępnych poza oficjalnym
+                  obiegiem.
+                </p>
+              </div>
+            </div>
+          </div>
+        </section>
+
         {/* ========== OPINIE ========== */}
         <section className="relative px-6 py-20 sm:px-8 lg:px-10">
           <div className="mx-auto max-w-7xl">

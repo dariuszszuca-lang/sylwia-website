@@ -7,9 +7,9 @@ import { LogoText } from "./LogoText";
 
 const NAV = [
   { href: "/posrednictwo", id: "posrednictwo", label: "Pośrednictwo" },
-  { href: "/inwestowanie", id: "inwestowanie", label: "Inwestowanie" },
+  { href: "/nsl", id: "nsl", label: "NSL" },
+  { href: "/biuro", id: "biuro", label: "Dom Hunter" },
   { href: "/szkolenia", id: "szkolenia", label: "Szkolenia" },
-  { href: "/wystapienia", id: "wystapienia", label: "Wystąpienia" },
 ];
 
 export function SiteHeader() {
