@@ -5,13 +5,16 @@ type FAQ = {
 
 export function FAQAccordion({ items }: { items: FAQ[] }) {
   return (
-    <div>
+    <div className="flex flex-col gap-3">
       {items.map((item, index) => (
         <details key={item.question} className="faq-item" open={index === 0}>
           <summary>
-            <span className="text-base font-semibold text-foreground sm:text-lg">
-              {item.question}
-            </span>
+            <div className="faq-question-wrap">
+              <span className="faq-number">{String(index + 1).padStart(2, "0")}</span>
+              <span className="text-base font-semibold text-foreground sm:text-lg">
+                {item.question}
+              </span>
+            </div>
             <span className="faq-icon" aria-hidden>
               <svg
                 width="14"
@@ -23,7 +26,7 @@ export function FAQAccordion({ items }: { items: FAQ[] }) {
                 <path
                   d="M7 1V13M1 7H13"
                   stroke="currentColor"
-                  strokeWidth="1.5"
+                  strokeWidth="1.8"
                   strokeLinecap="round"
                 />
               </svg>

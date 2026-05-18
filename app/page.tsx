@@ -470,21 +470,33 @@ export default function Home() {
 
         {/* ========== FAQ ========== */}
         <section id="faq" className="relative px-6 py-20 sm:px-8 lg:px-10 scroll-mt-24">
-          <div className="mx-auto max-w-7xl">
-            <div className="grid gap-12 lg:grid-cols-[0.4fr_0.6fr]">
-              <div>
-                <span className="kicker">FAQ</span>
-                <h2 className="display-tight mt-5 text-4xl font-medium leading-[1.02] text-foreground sm:text-5xl">
-                  Najczęstsze pytania.
-                </h2>
-                <p className="mt-6 max-w-sm text-sm leading-7 text-muted">
-                  Nie znalazłeś odpowiedzi? Napisz albo zadzwoń bezpośrednio.
-                </p>
-              </div>
+          {/* Glow tła */}
+          <div className="pointer-events-none absolute inset-0 -z-10">
+            <div className="absolute left-[15%] top-[10%] h-[24rem] w-[24rem] rounded-full bg-fuchsia-200/30 blur-[120px]" />
+            <div className="absolute right-[10%] bottom-[15%] h-[20rem] w-[20rem] rounded-full bg-champagne-100/40 blur-[100px]" />
+          </div>
 
-              <div className="premium-panel rounded-3xl px-8 py-2 sm:px-10">
-                <FAQAccordion items={faqItems} />
-              </div>
+          <div className="mx-auto max-w-4xl">
+            <div className="text-center mb-12">
+              <span className="kicker">FAQ</span>
+              <h2 className="display-tight mt-5 text-4xl font-medium leading-[1.02] text-foreground sm:text-5xl lg:text-6xl">
+                Najczęstsze <span className="italic text-fuchsia-700">pytania.</span>
+              </h2>
+              <p className="mx-auto mt-6 max-w-md text-base leading-7 text-muted">
+                Nie znalazłaś odpowiedzi? Napisz na <a href="mailto:swroblewska@domhunter.pl" className="text-foreground underline decoration-fuchsia-400 underline-offset-4 hover:text-fuchsia-700">swroblewska@domhunter.pl</a> albo zadzwoń bezpośrednio.
+              </p>
+            </div>
+
+            <FAQAccordion items={faqItems} />
+
+            {/* Kontakt CTA pod FAQ */}
+            <div className="mt-10 flex flex-col items-center gap-3 sm:flex-row sm:justify-center">
+              <a href="tel:+48571309209" className="btn-secondary">
+                +48 571 309 209
+              </a>
+              <a href="mailto:swroblewska@domhunter.pl" className="btn-primary">
+                Napisz mailem
+              </a>
             </div>
           </div>
         </section>
