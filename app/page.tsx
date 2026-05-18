@@ -50,7 +50,7 @@ const jsonLd = {
       name: "Sylwia Wróblewska",
       jobTitle: "Pośredniczka nieruchomości, inwestorka, trenerka",
       description:
-        "Sylwia Wróblewska — pośredniczka nieruchomości z Trójmiasta, założycielka Nieruchomości Spod Lady. Laureatka nagrody Pionier Etycznego Rynku Nieruchomości Off Market 2025.",
+        "Sylwia Wróblewska, pośredniczka nieruchomości z Trójmiasta, założycielka Nieruchomości Spod Lady. Laureatka nagrody Pionier Etycznego Rynku Nieruchomości Off Market 2025.",
       image: "https://sylwiawroblewska.pl/images/sylwia-wroblewska.jpg",
       url: "https://sylwiawroblewska.pl",
       email: "mailto:sylwia@nieruchomoscispodlady.pl",
@@ -61,7 +61,7 @@ const jsonLd = {
         addressRegion: "Pomorskie",
         addressCountry: "PL",
       },
-      award: "Pionier Etycznego Rynku Nieruchomości Off Market 2025 — Businesswoman Awards",
+      award: "Pionier Etycznego Rynku Nieruchomości Off Market 2025, Businesswoman Awards",
       knowsAbout: [
         "sprzedaż nieruchomości",
         "nieruchomości off-market",
@@ -134,7 +134,7 @@ export default function Home() {
                   <strong className="font-semibold text-foreground-soft">Dom Hunter</strong>,
                   założycielka{" "}
                   <strong className="font-semibold text-foreground-soft">Nieruchomości Spod Lady</strong>{" "}
-                  — społeczności 1 600 pośredników w Polsce.
+                  , społeczności 1 600 pośredników w Polsce.
                 </p>
 
                 <blockquote className="mt-8 max-w-xl border-l-2 border-fuchsia-500 pl-5 italic font-display text-lg leading-7 text-foreground-soft sm:text-xl sm:leading-8">
@@ -165,7 +165,7 @@ export default function Home() {
                     />
                   </div>
 
-                  {/* Award badge — floating prawy dolny róg */}
+                  {/* Award badge: floating prawy dolny rog */}
                   <div className="absolute -bottom-6 -right-3 sm:-right-6 max-w-[20rem]">
                     <AwardBadge />
                   </div>
@@ -256,7 +256,7 @@ export default function Home() {
                 <div className="text-base leading-7 text-muted">
                   <p>
                     Współpracuję z inwestorami szukającymi nieruchomości pod wynajem, flipy lub długoterminowy portfel.
-                    Wybór mieszkania to nie tylko cena za metr — to lokalizacja, plan miejscowy, stan prawny, potencjał
+                    Wybór mieszkania to nie tylko cena za metr. To lokalizacja, plan miejscowy, stan prawny, potencjał
                     najmu, koszty utrzymania. Pomagam to wszystko przeliczyć przed decyzją.
                   </p>
                 </div>
