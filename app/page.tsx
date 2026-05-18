@@ -154,27 +154,34 @@ export default function Home() {
                   </a>
                 </div>
 
-                {/* Nagroda pełna: dyskretny eksponent pod CTA */}
+                {/* Nagroda pełna + logo NSL: dyskretny eksponent pod CTA */}
                 <Link
                   href="/nagrody"
-                  className="mt-10 flex items-center gap-5 rounded-2xl border border-border bg-background-soft/60 p-4 transition-all hover:border-fuchsia-300 hover:bg-background-soft hover:-translate-y-0.5 sm:max-w-md"
+                  className="mt-10 flex items-center gap-4 rounded-2xl border border-border bg-background-soft/60 p-4 transition-all hover:border-fuchsia-300 hover:bg-background-soft hover:-translate-y-0.5 sm:max-w-2xl"
                 >
                   <Image
                     src="/images/nagrody/nagroda-pelna.png"
                     alt="Pionier Etycznego Rynku Nieruchomości Off Market 2025"
                     width={160}
                     height={160}
-                    className="h-auto w-20 sm:w-24 object-contain drop-shadow-[0_8px_16px_rgba(122,82,16,0.15)]"
+                    className="h-auto w-16 sm:w-20 flex-shrink-0 object-contain drop-shadow-[0_8px_16px_rgba(122,82,16,0.15)]"
                   />
-                  <div className="flex-1">
+                  <div className="flex-1 min-w-0">
                     <p className="kicker text-fuchsia-700">Wyróżnienie 2025</p>
-                    <p className="mt-1.5 font-display italic text-base leading-5 text-foreground-soft sm:text-lg">
+                    <p className="mt-1.5 font-display italic text-sm leading-5 text-foreground-soft sm:text-base">
                       Pionier Etycznego Rynku Nieruchomości Off Market
                     </p>
-                    <p className="mt-1 text-[0.7rem] font-mono text-muted-soft tracking-wider uppercase">
+                    <p className="mt-1 text-[0.65rem] font-mono text-muted-soft tracking-wider uppercase">
                       XXV Businesswoman Awards
                     </p>
                   </div>
+                  <Image
+                    src="/images/nsl-logo.png"
+                    alt="Nieruchomości Spod Lady®"
+                    width={140}
+                    height={100}
+                    className="hidden sm:block h-auto w-20 flex-shrink-0 object-contain"
+                  />
                 </Link>
               </div>
 
