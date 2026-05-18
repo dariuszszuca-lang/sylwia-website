@@ -98,29 +98,26 @@ export function SubpageLayout({ kicker, title, intro, image, children }: Props) 
           </div>
         </section>
 
-        {/* FOOTER */}
-        <footer className="relative px-6 pb-12 pt-4 sm:px-8 lg:px-10">
+        {/* FOOTER (compact) */}
+        <footer className="relative px-6 pb-8 pt-4 sm:px-8 lg:px-10">
           <div className="mx-auto max-w-7xl">
-            <div className="premium-panel rounded-3xl px-7 py-9 sm:px-10">
-              <div className="flex flex-col gap-8 sm:flex-row sm:items-end sm:justify-between">
+            <div className="premium-panel rounded-2xl px-6 py-6 sm:px-8 sm:py-7">
+              <div className="flex flex-col gap-5 sm:flex-row sm:items-center sm:justify-between">
                 <LogoText />
-                <div className="flex flex-col gap-2 text-sm text-muted sm:text-right">
+                <div className="flex flex-wrap items-center gap-x-5 gap-y-2 text-xs text-muted">
                   <a href="tel:+48571309209" className="font-mono hover:text-fuchsia-700">
                     +48 571 309 209
                   </a>
-                  <a
-                    href="mailto:swroblewska@domhunter.pl"
-                    className="hover:text-fuchsia-700"
-                  >
+                  <a href="mailto:swroblewska@domhunter.pl" className="hover:text-fuchsia-700">
                     swroblewska@domhunter.pl
                   </a>
-                  <Link href="/konsultacje" className="hover:text-fuchsia-700">
-                    Konsultacje 1:1
-                  </Link>
+                  <Link href="/" className="hover:text-fuchsia-700">Strona główna</Link>
+                  <Link href="/kontakt" className="hover:text-fuchsia-700">Kontakt</Link>
                 </div>
               </div>
-              <div className="mt-8 border-t border-border pt-6 text-xs text-muted-soft">
-                © 2026 Sylwia Wróblewska. Licencja zawodowa nr 18311.
+              <div className="mt-5 flex flex-col gap-1 border-t border-border pt-4 text-[0.7rem] text-muted-soft sm:flex-row sm:items-center sm:justify-between">
+                <span>© 2026 Sylwia Wróblewska. Wszelkie prawa zastrzeżone.</span>
+                <span className="font-mono">Licencja zawodowa nr 18311 · Pomorskie</span>
               </div>
             </div>
           </div>

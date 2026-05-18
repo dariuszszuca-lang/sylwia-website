@@ -556,85 +556,69 @@ export default function Home() {
           </div>
         </section>
 
-        {/* ========== FOOTER ========== */}
-        <footer className="relative px-6 pb-12 pt-4 sm:px-8 lg:px-10">
+        {/* ========== FOOTER (compact) ========== */}
+        <footer className="relative px-6 pb-8 pt-4 sm:px-8 lg:px-10">
           <div className="mx-auto max-w-7xl">
-            <div className="premium-panel rounded-3xl px-7 py-9 sm:px-10">
-              <div className="grid gap-10 lg:grid-cols-[1.1fr_0.9fr_0.8fr]">
+            <div className="premium-panel rounded-2xl px-6 py-6 sm:px-8 sm:py-7">
+              <div className="grid gap-x-8 gap-y-6 sm:grid-cols-2 lg:grid-cols-[1.3fr_0.8fr_0.7fr_0.9fr]">
+                {/* Logo + tagline */}
                 <div>
                   <LogoText />
-                  <p className="mt-5 max-w-md text-sm leading-7 text-muted">
-                    Pośrednictwo nieruchomości, inwestowanie, szkolenia i mentoring w Trójmieście i online.
-                    Założycielka Nieruchomości Spod Lady. Laureatka nagrody Pioniera Etycznego Rynku 2025.
+                  <p className="mt-3 max-w-xs text-xs leading-5 text-muted">
+                    Pośrednictwo, inwestowanie, szkolenia w Trójmieście i online.
                   </p>
                 </div>
 
+                {/* Działalność */}
                 <div>
-                  <p className="text-sm font-semibold text-foreground">Sekcje</p>
-                  <div className="mt-4 flex flex-col gap-2 text-sm text-muted">
+                  <p className="text-[0.65rem] font-mono uppercase tracking-[0.18em] text-gold-mid">Działalność</p>
+                  <div className="mt-3 flex flex-col gap-1.5 text-xs text-muted">
                     <Link href="/posrednictwo" className="hover:text-fuchsia-700">Pośrednictwo</Link>
                     <Link href="/inwestowanie" className="hover:text-fuchsia-700">Inwestowanie</Link>
                     <Link href="/szkolenia" className="hover:text-fuchsia-700">Szkolenia</Link>
                     <Link href="/wystapienia" className="hover:text-fuchsia-700">Wystąpienia</Link>
                     <Link href="/mentoring" className="hover:text-fuchsia-700">Mentoring</Link>
-                    <Link href="/biuro" className="hover:text-fuchsia-700">Dom Hunter</Link>
-                    <Link href="/nagrody" className="hover:text-fuchsia-700">Nagrody</Link>
-                    <Link href="/publikacje" className="hover:text-fuchsia-700">Publikacje</Link>
-                    <Link href="/konsultacje" className="hover:text-fuchsia-700">
-                      Konsultacje 1:1
-                    </Link>
-                    <Link href="/kontakt" className="hover:text-fuchsia-700">
-                      Kontakt
-                    </Link>
                   </div>
                 </div>
 
+                {/* Marki + inne */}
                 <div>
-                  <p className="text-sm font-semibold text-foreground">Kontakt</p>
-                  <div className="mt-4 flex flex-col gap-2 text-sm text-muted">
-                    <a
-                      href="tel:+48571309209"
-                      className="font-mono hover:text-fuchsia-700"
-                    >
+                  <p className="text-[0.65rem] font-mono uppercase tracking-[0.18em] text-gold-mid">Marki</p>
+                  <div className="mt-3 flex flex-col gap-1.5 text-xs text-muted">
+                    <Link href="/nsl" className="hover:text-fuchsia-700">NSL®</Link>
+                    <Link href="/biuro" className="hover:text-fuchsia-700">Dom Hunter</Link>
+                    <Link href="/nagrody" className="hover:text-fuchsia-700">Nagrody</Link>
+                    <Link href="/publikacje" className="hover:text-fuchsia-700">Publikacje</Link>
+                    <Link href="/konsultacje" className="hover:text-fuchsia-700">Konsultacje 1:1</Link>
+                  </div>
+                </div>
+
+                {/* Kontakt */}
+                <div>
+                  <p className="text-[0.65rem] font-mono uppercase tracking-[0.18em] text-gold-mid">Kontakt</p>
+                  <div className="mt-3 flex flex-col gap-1.5 text-xs text-muted">
+                    <a href="tel:+48571309209" className="font-mono hover:text-fuchsia-700">
                       +48 571 309 209
                     </a>
-                    <a
-                      href="mailto:swroblewska@domhunter.pl"
-                      className="hover:text-fuchsia-700"
-                    >
+                    <a href="mailto:swroblewska@domhunter.pl" className="hover:text-fuchsia-700 break-all">
                       swroblewska@domhunter.pl
                     </a>
-                    <a
-                      href="https://www.domhunter.pl"
-                      target="_blank"
-                      rel="noreferrer"
-                      className="hover:text-fuchsia-700"
-                    >
-                      domhunter.pl
-                    </a>
-                    <a
-                      href="https://www.nieruchomoscispodlady.pl"
-                      target="_blank"
-                      rel="noreferrer"
-                      className="hover:text-fuchsia-700"
-                    >
-                      nieruchomoscispodlady.pl
-                    </a>
-                    <a
-                      href="https://www.instagram.com/sylwiawroblewska.pl/"
-                      target="_blank"
-                      rel="noreferrer"
-                      className="hover:text-fuchsia-700"
-                    >
-                      Instagram
-                    </a>
+                    <Link href="/kontakt" className="hover:text-fuchsia-700">Wszystkie kanały →</Link>
+                    <div className="mt-1.5 flex gap-2.5 text-muted-soft">
+                      <a href="https://www.instagram.com/sylwiawroblewska.pl/" target="_blank" rel="noreferrer" className="hover:text-fuchsia-700" aria-label="Instagram">IG</a>
+                      <span>·</span>
+                      <a href="https://www.facebook.com/groups/nieruchomoscispodlady" target="_blank" rel="noreferrer" className="hover:text-fuchsia-700" aria-label="Facebook NSL">FB</a>
+                      <span>·</span>
+                      <a href="https://www.domhunter.pl" target="_blank" rel="noreferrer" className="hover:text-fuchsia-700">DH</a>
+                    </div>
                   </div>
                 </div>
               </div>
 
-              <div className="mt-10 flex flex-col gap-2 border-t border-border pt-6 text-xs text-muted-soft sm:flex-row sm:items-center sm:justify-between">
+              {/* Bottom bar */}
+              <div className="mt-6 flex flex-col gap-1.5 border-t border-border pt-4 text-[0.7rem] text-muted-soft sm:flex-row sm:items-center sm:justify-between">
                 <span>© 2026 Sylwia Wróblewska. Wszelkie prawa zastrzeżone.</span>
-                <span className="font-mono">Licencja zawodowa nr 18311</span>
+                <span className="font-mono">Licencja zawodowa nr 18311 · Pomorskie</span>
               </div>
             </div>
           </div>
