@@ -55,6 +55,7 @@ export default function PosrednictwoPage() {
         </>
       }
       intro="Aktywny pośrednik nieruchomości, staż 17 lat. Do każdego zlecenia podchodzę indywidualnie i nieszablonowo, z uwzględnieniem potrzeb i oczekiwań klientów. Pracuję zespołowo, otaczając się zaangażowanymi i świadomymi pośrednikami."
+      image={{ src: "/images/sylwia/klucze.jpg", alt: "Sylwia Wróblewska z kluczami do nieruchomości" }}
     >
       <div className="mx-auto max-w-5xl">
         {/* JAK MOGĘ POMÓC */}

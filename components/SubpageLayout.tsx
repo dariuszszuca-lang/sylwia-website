@@ -1,4 +1,5 @@
 import Link from "next/link";
+import Image from "next/image";
 import { ReactNode } from "react";
 import { SiteHeader } from "./SiteHeader";
 import { LogoText } from "./LogoText";
@@ -7,6 +8,8 @@ type Props = {
   kicker: string;
   title: ReactNode;
   intro?: string;
+  /** Opcjonalne zdjęcie po prawej w hero (np. portret tematyczny). */
+  image?: { src: string; alt: string };
   children: ReactNode;
 };
 
@@ -14,7 +17,7 @@ type Props = {
  * Wspólny layout dla podstron kategorii (Pośrednictwo, Inwestowanie, etc.)
  * Ten sam header, hero pattern i footer co na stronie głównej.
  */
-export function SubpageLayout({ kicker, title, intro, children }: Props) {
+export function SubpageLayout({ kicker, title, intro, image, children }: Props) {
   return (
     <>
       <SiteHeader />
@@ -28,21 +31,47 @@ export function SubpageLayout({ kicker, title, intro, children }: Props) {
 
         {/* HERO podstrony */}
         <section className="relative px-6 pt-16 pb-12 sm:px-8 lg:px-10 lg:pt-24">
-          <div className="mx-auto max-w-5xl">
+          <div className={`mx-auto ${image ? "max-w-7xl" : "max-w-5xl"}`}>
             <Link href="/" className="kicker hover:text-fuchsia-700 inline-flex items-center gap-1.5">
               <span>←</span>
               <span>Wróć do strony głównej</span>
             </Link>
 
-            <div className="mt-8">
-              <span className="kicker">{kicker}</span>
-              <h1 className="display mt-5 text-4xl leading-[1] font-medium text-foreground sm:text-6xl lg:text-7xl">
-                {title}
-              </h1>
-              {intro ? (
-                <p className="mt-8 max-w-2xl text-base leading-8 text-muted sm:text-lg">{intro}</p>
-              ) : null}
-            </div>
+            {image ? (
+              <div className="mt-8 grid gap-10 lg:grid-cols-[1.05fr_0.95fr] lg:items-center">
+                <div>
+                  <span className="kicker">{kicker}</span>
+                  <h1 className="display mt-5 text-4xl leading-[1] font-medium text-foreground sm:text-6xl lg:text-7xl">
+                    {title}
+                  </h1>
+                  {intro ? (
+                    <p className="mt-8 max-w-2xl text-base leading-8 text-muted sm:text-lg">{intro}</p>
+                  ) : null}
+                </div>
+                <div className="relative ml-auto w-full max-w-[28rem]">
+                  <div className="portrait-frame aspect-[3/4] w-full">
+                    <Image
+                      src={image.src}
+                      alt={image.alt}
+                      fill
+                      priority
+                      sizes="(min-width: 1024px) 28rem, (min-width: 640px) 60vw, 100vw"
+                      className="object-cover"
+                    />
+                  </div>
+                </div>
+              </div>
+            ) : (
+              <div className="mt-8">
+                <span className="kicker">{kicker}</span>
+                <h1 className="display mt-5 text-4xl leading-[1] font-medium text-foreground sm:text-6xl lg:text-7xl">
+                  {title}
+                </h1>
+                {intro ? (
+                  <p className="mt-8 max-w-2xl text-base leading-8 text-muted sm:text-lg">{intro}</p>
+                ) : null}
+              </div>
+            )}
           </div>
         </section>
 

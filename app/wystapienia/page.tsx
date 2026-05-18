@@ -35,6 +35,7 @@ export default function WystapieniaPage() {
         </>
       }
       intro="Występuję na konferencjach branży nieruchomości, w panelach eksperckich i w mediach. Dzielę się tym, co naprawdę działa w pracy pośrednika i co buduje branżę długoterminowo."
+      image={{ src: "/images/sylwia/popiersie.jpg", alt: "Sylwia Wróblewska z popiersiem, energiczna postawa" }}
     >
       <div className="mx-auto max-w-5xl">
         <section className="mt-8">

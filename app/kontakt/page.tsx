@@ -58,6 +58,7 @@ export default function KontaktPage() {
         </>
       }
       intro="Każda współpraca zaczyna się od krótkiej rozmowy, w której ustalamy zakres i tempo działania. Odpisuję sama, bez asystentów. Wybierz najwygodniejszy dla Ciebie kanał."
+      image={{ src: "/images/sylwia/kawa.jpg", alt: "Sylwia Wróblewska przy kawie, gotowa do rozmowy" }}
     >
       <div className="mx-auto max-w-5xl">
         {/* KANAŁY BEZPOŚREDNIE */}

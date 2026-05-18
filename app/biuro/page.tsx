@@ -40,6 +40,7 @@ export default function BiuroPage() {
         </>
       }
       intro="Dom Hunter Sp. z o.o., butikowe biuro nieruchomości w Trójmieście. Mała liczba projektów rocznie, dyskrecja, praca na relację. Sprzedaż wtórna, pierwotna, działki, obiekty komercyjne i inwestycyjne."
+      image={{ src: "/images/sylwia/dom-hunter-teczka.jpg", alt: "Sylwia Wróblewska z teczką Dom Hunter Nieruchomości" }}
     >
       <div className="mx-auto max-w-5xl">
         {/* NAJWAŻNIEJSZE TRANSAKCJE */}
