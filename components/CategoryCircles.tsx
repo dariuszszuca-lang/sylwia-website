@@ -84,7 +84,7 @@ const categories: Category[] = [
     id: "nagrody",
     label: "Nagrody",
     href: "/nagrody",
-    image: "/images/nagrody/nagroda-pelna.png",
+    image: "/images/sylwia/kapelusz.jpg",
     icon: (
       <svg viewBox="0 0 32 32" fill="none" stroke="currentColor" strokeWidth="1.5">
         <path d="M10 5h12v6a6 6 0 11-12 0V5zM10 7H6v3a4 4 0 004 4M22 7h4v3a4 4 0 01-4 4M13 17l-1 5h8l-1-5M10 27h12" strokeLinecap="round" strokeLinejoin="round" />

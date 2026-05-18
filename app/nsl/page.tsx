@@ -1,3 +1,4 @@
+import Image from "next/image";
 import { SubpageLayout } from "@/components/SubpageLayout";
 
 export const metadata = {
@@ -130,11 +131,15 @@ export default function NSLPage() {
         {/* LOGO I SYMBOLIKA */}
         <section className="mt-16">
           <div className="premium-panel rounded-[2rem] p-8 sm:p-12">
-            <div className="grid gap-10 lg:grid-cols-[0.3fr_0.7fr] lg:items-center">
+            <div className="grid gap-10 lg:grid-cols-[0.4fr_0.6fr] lg:items-center">
               <div className="flex justify-center">
-                <div className="relative">
-                  <div className="h-32 w-32 sm:h-40 sm:w-40 rounded-full bg-gradient-to-br from-fuchsia-light via-fuchsia-mid to-fuchsia-dark shadow-[0_24px_50px_-8px_rgba(196,48,119,0.5)]" />
-                </div>
+                <Image
+                  src="/images/nsl-logo.png"
+                  alt="Logo Nieruchomości Spod Lady (zastrzeżone w Urzędzie Patentowym, nr 373872)"
+                  width={420}
+                  height={300}
+                  className="h-auto w-full max-w-[20rem] object-contain drop-shadow-[0_20px_40px_rgba(196,48,119,0.18)]"
+                />
               </div>
               <div>
                 <span className="kicker">Logo i symbolika</span>
@@ -148,7 +153,7 @@ export default function NSLPage() {
                   czerwieni i spokój niebieskiego.
                 </p>
                 <p className="mt-4 text-sm text-muted-soft">
-                  Logo zaprojektowała Magdalena Rutkowska. Nazwa i logo „Nieruchomości Spod Lady”
+                  Logo zaprojektowała Magdalena Rutkowska. Nazwa i logo „Nieruchomości Spod Lady®”
                   mają ochronę Urzędu Patentowego, numer prawa 373872.
                 </p>
               </div>

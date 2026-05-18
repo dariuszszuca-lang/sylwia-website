@@ -1280,6 +1280,7 @@ details.faq-item summary::-webkit-details-marker {
 
 .category-circle-image {
   object-fit: cover;
+  object-position: center 18%;
   z-index: 1;
 }
 

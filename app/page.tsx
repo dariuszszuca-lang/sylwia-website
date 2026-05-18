@@ -232,9 +232,6 @@ export default function Home() {
               <h2 className="display-tight mx-auto mt-5 max-w-3xl text-4xl font-medium leading-[1.02] text-foreground sm:text-5xl">
                 Osiem obszarów. <span className="italic text-fuchsia-700">Jedna spójna praca.</span>
               </h2>
-              <p className="mx-auto mt-6 max-w-2xl text-base leading-8 text-muted">
-                Kliknij dowolne kółko, żeby zobaczyć szczegóły.
-              </p>
             </div>
 
             <CategoryCircles />
