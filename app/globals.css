@@ -1183,13 +1183,14 @@ details.faq-item summary::-webkit-details-marker {
 .logo-name {
   font-family: var(--font-display), Georgia, serif;
   font-weight: 500;
-  font-size: 1.1rem;
+  font-size: 1.6rem;
   line-height: 1;
-  letter-spacing: -0.01em;
+  letter-spacing: -0.015em;
 }
 
 .logo-stack-compact .logo-name {
-  font-size: 1rem;
+  font-size: 1.15rem;
+  letter-spacing: -0.01em;
 }
 
 .logo-first {
@@ -1198,20 +1199,24 @@ details.faq-item summary::-webkit-details-marker {
 
 .logo-last {
   color: var(--fuchsia-600);
+  font-weight: 600;
 }
 
 .logo-roles {
   font-family: var(--font-mono), ui-monospace, monospace;
-  font-size: 0.625rem;
-  letter-spacing: 0.18em;
+  font-size: 0.7rem;
+  letter-spacing: 0.22em;
   text-transform: uppercase;
   color: var(--muted);
-  padding-left: 1.45rem;
+  padding-left: 1.65rem;
+  margin-top: 0.35rem;
 }
 
 .logo-stack-compact .logo-roles {
   font-size: 0.55rem;
   padding-left: 1.3rem;
+  margin-top: 0.2rem;
+  letter-spacing: 0.18em;
 }
 
 /* ============ CATEGORY CIRCLES (8 fuksjowych kół) ============ */

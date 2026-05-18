@@ -48,7 +48,7 @@ export function SubpageLayout({ kicker, title, intro, image, children }: Props) 
                     <p className="mt-8 max-w-2xl text-base leading-8 text-muted sm:text-lg">{intro}</p>
                   ) : null}
                 </div>
-                <div className="relative ml-auto w-full max-w-[28rem]">
+                <div className="relative mx-auto lg:ml-auto w-full max-w-[28rem]">
                   <div className="portrait-frame aspect-[3/4] w-full">
                     <Image
                       src={image.src}
@@ -56,7 +56,7 @@ export function SubpageLayout({ kicker, title, intro, image, children }: Props) 
                       fill
                       priority
                       sizes="(min-width: 1024px) 28rem, (min-width: 640px) 60vw, 100vw"
-                      className="object-cover"
+                      className="object-cover object-top"
                     />
                   </div>
                 </div>

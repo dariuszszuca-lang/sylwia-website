@@ -27,6 +27,7 @@ const categories: Category[] = [
     id: "inwestowanie",
     label: "Inwestowanie",
     href: "/inwestowanie",
+    image: "/images/sylwia/inwestowanie.jpg",
     icon: (
       <svg viewBox="0 0 32 32" fill="none" stroke="currentColor" strokeWidth="1.5">
         <path d="M5 24l7-7 5 5 9-12M19 10h7v7" strokeLinecap="round" strokeLinejoin="round" />
@@ -37,6 +38,7 @@ const categories: Category[] = [
     id: "szkolenia",
     label: "Szkolenia",
     href: "/szkolenia",
+    image: "/images/sylwia/szkolenia.jpg",
     icon: (
       <svg viewBox="0 0 32 32" fill="none" stroke="currentColor" strokeWidth="1.5">
         <path d="M16 5l13 6-13 6L3 11l13-6zM9 14v8c0 1.5 3 3 7 3s7-1.5 7-3v-8" strokeLinecap="round" strokeLinejoin="round" />
@@ -93,6 +95,7 @@ const categories: Category[] = [
     id: "publikacje",
     label: "Publikacje",
     href: "/publikacje",
+    image: "/images/sylwia/publikacje.jpg",
     icon: (
       <svg viewBox="0 0 32 32" fill="none" stroke="currentColor" strokeWidth="1.5">
         <path d="M4 8c4-2 8-2 12 0v18c-4-2-8-2-12 0V8zM16 8c4-2 8-2 12 0v18c-4-2-8-2-12 0" strokeLinecap="round" strokeLinejoin="round" />
