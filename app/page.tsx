@@ -170,12 +170,13 @@ export default function Home() {
                     />
                   </div>
 
-                  {/* Award badge: floating prawy dolny rog */}
-                  <div className="absolute -bottom-6 -right-3 sm:-right-6 max-w-[20rem]">
+                  {/* Award badge: na mobile pod portretem, na desktop floating */}
+                  <div className="mt-6 sm:absolute sm:-bottom-6 sm:-right-3 sm:mt-0 lg:-right-6 sm:max-w-[20rem]">
                     <AwardBadge />
                   </div>
 
-                  <div className="absolute -top-4 -left-2 rounded-2xl border border-border-strong bg-background-soft/95 px-4 py-3 shadow-md backdrop-blur-xl sm:-left-6">
+                  {/* Telefon chip: ukryty na małym mobile, floating od sm+ */}
+                  <div className="hidden sm:block absolute -top-4 -left-2 rounded-2xl border border-border-strong bg-background-soft/95 px-4 py-3 shadow-md backdrop-blur-xl sm:-left-6">
                     <p className="kicker">Telefon</p>
                     <a
                       href="tel:+48571309209"
@@ -246,20 +247,20 @@ export default function Home() {
                     Zobacz więcej o nagrodzie <span aria-hidden>→</span>
                   </Link>
                 </div>
-                <div className="flex items-center justify-center gap-6">
+                <div className="flex flex-col items-center justify-center gap-6 sm:flex-row">
                   <Image
                     src="/images/nagrody/statuetka.png"
                     alt="Statuetka Pionier Etycznego Rynku Nieruchomości Off Market 2025"
                     width={200}
                     height={400}
-                    className="h-auto w-auto max-h-[18rem] object-contain drop-shadow-[0_24px_40px_rgba(122,82,16,0.25)]"
+                    className="h-auto w-auto max-h-[14rem] sm:max-h-[18rem] object-contain drop-shadow-[0_24px_40px_rgba(122,82,16,0.25)]"
                   />
                   <Image
                     src="/images/nagrody/odznaka-pioniera.png"
                     alt="Odznaka Pionier Etycznego Rynku Nieruchomości Off Market 2025"
                     width={180}
                     height={180}
-                    className="h-auto w-auto max-h-[10rem] object-contain drop-shadow-[0_12px_24px_rgba(122,82,16,0.2)]"
+                    className="h-auto w-auto max-h-[8rem] sm:max-h-[10rem] object-contain drop-shadow-[0_12px_24px_rgba(122,82,16,0.2)]"
                   />
                 </div>
               </div>

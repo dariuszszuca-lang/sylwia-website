@@ -37,14 +37,14 @@ export function SiteHeader() {
   }, [menuOpen]);
 
   return (
-    <header className="sticky top-4 z-50 px-4 sm:top-6 sm:px-6 lg:px-10">
+    <header className="relative z-40 px-4 pt-4 sm:px-6 sm:pt-6 lg:px-10">
       <div className="mx-auto max-w-6xl">
         <div
           className={[
-            "flex items-center justify-between gap-3 rounded-full border px-3 py-2 transition-all duration-500 sm:px-4 sm:py-2.5",
+            "flex items-center justify-between gap-3 rounded-full border px-3 py-2 sm:px-4 sm:py-2.5",
             scrolled
               ? "border-border-strong bg-background-soft/85 shadow-md backdrop-blur-2xl"
-              : "border-border bg-background-soft/55 backdrop-blur-xl",
+              : "border-border bg-background-soft/65 backdrop-blur-xl",
           ].join(" ")}
         >
           <Link
