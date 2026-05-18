@@ -495,7 +495,7 @@ export default function Home() {
                 +48 571 309 209
               </a>
               <a href="mailto:swroblewska@domhunter.pl" className="btn-primary">
-                Napisz mailem
+                Napisz do mnie
               </a>
             </div>
           </div>
