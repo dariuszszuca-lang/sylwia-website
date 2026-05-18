@@ -350,8 +350,8 @@ export default function Home() {
                     <span className="italic text-fuchsia-700">cena za metr.</span>
                   </h2>
                   <p className="mt-6 text-base leading-7 text-muted sm:text-lg">
-                    Sama inwestuję i jestem przedsiębiorcą. Wiem co liczyć i co przeoczyć łatwo, jeśli
-                    patrzysz tylko na ofertę z portalu.
+                    Sama inwestuję od lat. Wiem co policzyć i co łatwo przeoczyć, kiedy patrzysz tylko
+                    na ofertę z portalu.
                   </p>
                   <Link
                     href="/inwestowanie"
