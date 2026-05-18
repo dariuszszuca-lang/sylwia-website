@@ -435,12 +435,19 @@ export default function Home() {
           <div className="mx-auto max-w-7xl">
             <div className="grid gap-12 lg:grid-cols-[0.45fr_0.55fr] lg:items-center">
               <div>
+                <Image
+                  src="/images/nsl-logo.png"
+                  alt="Logo Nieruchomości Spod Lady"
+                  width={200}
+                  height={144}
+                  className="h-auto w-32 sm:w-40 mb-6 object-contain"
+                />
                 <span className="kicker">Newsletter NSL</span>
                 <h2 className="display-tight mt-5 text-4xl font-medium leading-[1.02] text-foreground sm:text-5xl">
                   Praktyczny update z rynku, raz w tygodniu.
                 </h2>
                 <p className="mt-6 max-w-md text-sm leading-7 text-muted sm:text-base">
-                  Lista mailowa Nieruchomości Spod Lady. Konkretne case'y, narzędzia, trendy z rynku off-market.
+                  Lista mailowa Nieruchomości Spod Lady®. Konkretne case'y, narzędzia, trendy z rynku off-market.
                 </p>
               </div>
 
