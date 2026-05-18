@@ -30,7 +30,7 @@ export const metadata: Metadata = {
     template: "%s | Sylwia Wróblewska",
   },
   description:
-    "Sylwia Wróblewska. 17 lat na rynku nieruchomości, właścicielka biura Dom Hunter w Trójmieście, założycielka Nieruchomości Spod Lady (2 000 agentów). Laureatka nagrody Pionier Etycznego Rynku Off Market 2025.",
+    "Sylwia Wróblewska. Pośrednik nieruchomości, przedsiębiorca, inwestor. Właścicielka biura Dom Hunter w Gdańsku. Założycielka Nieruchomości Spod Lady (20 000 agentów w 8 regionach Polski). Laureatka nagrody Pionier Etycznego Rynku Off Market 2025, Businesswoman & Life.",
   keywords: [
     "Sylwia Wróblewska",
     "Dom Hunter Trójmiasto",
@@ -50,7 +50,7 @@ export const metadata: Metadata = {
   openGraph: {
     title: "Sylwia Wróblewska | Pośrednik, inwestor, trener · Trójmiasto",
     description:
-      "17 lat na rynku nieruchomości. Dom Hunter w Trójmieście, społeczność Nieruchomości Spod Lady (2 000 agentów), Pionier Etycznego Rynku Off Market 2025.",
+      "17 lat na rynku nieruchomości. Dom Hunter w Gdańsku, społeczność Nieruchomości Spod Lady (20 000 agentów w 8 regionach Polski), Pionier Etycznego Rynku Off Market 2025.",
     url: "https://sylwiawroblewska.pl",
     siteName: "Sylwia Wróblewska",
     locale: "pl_PL",
@@ -68,7 +68,7 @@ export const metadata: Metadata = {
     card: "summary_large_image",
     title: "Sylwia Wróblewska | Pośrednik, inwestor, trener",
     description:
-      "17 lat na rynku nieruchomości. Dom Hunter Trójmiasto, społeczność NSL, Pionier Etycznego Rynku 2025.",
+      "Dom Hunter Gdańsk, społeczność NSL (20 000 agentów), Pionier Etycznego Rynku Off Market 2025.",
     images: ["/images/sylwia-wroblewska.jpg"],
   },
   robots: {

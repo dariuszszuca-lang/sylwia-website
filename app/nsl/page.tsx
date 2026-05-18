@@ -4,7 +4,7 @@ import { SubpageLayout } from "@/components/SubpageLayout";
 export const metadata = {
   title: "Nieruchomości Spod Lady · Sylwia Wróblewska",
   description:
-    "Największa społeczność współpracujących agentów nieruchomości w Polsce — 2 000 pośredników, rynek off-market, ofert na wyłączność. Laureatka nagrody Pionier Etycznego Rynku Off Market 2025.",
+    "Największa społeczność współpracujących agentów nieruchomości w Polsce, 20 000 zweryfikowanych pośredników w 8 regionach kraju. Rynek off-market, oferty na wyłączność. Laureatka nagrody Pionier Etycznego Rynku Off Market 2025, Businesswoman & Life.",
 };
 
 const wartosci = [
@@ -54,18 +54,25 @@ export default function NSLPage() {
           <div className="premium-panel champagne-line rounded-[2rem] p-8 sm:p-12">
             <div className="grid gap-10 lg:grid-cols-[0.4fr_0.6fr] lg:items-center">
               <div className="text-center lg:text-left">
-                <div className="big-num fuchsia">2 000</div>
-                <p className="kicker mt-3">Pośredników w Polsce</p>
+                <div className="big-num fuchsia">20 000</div>
+                <p className="kicker mt-3">Pośredników w 8 regionach Polski</p>
               </div>
               <div className="text-base leading-7 text-muted sm:text-lg">
                 <p>
-                  Więcej niż wszystkie biura sieciowe w Polsce razem. Codziennie wspólnie zamykamy
-                  kolejne transakcje dzięki współpracy, zaufaniu, szacunkowi i dobrym wzajemnym
-                  relacjom.
+                  Agenci NSL jako pierwsi w kraju dowiadują się o nieruchomościach, które nigdy
+                  nie trafią na portale. Razem zamykają transakcje, które solo byłyby niemożliwe.
                 </p>
                 <p className="mt-4 italic font-display text-foreground-soft">
                   „Najlepsze oferty są te, których nie ma.”
                 </p>
+                <a
+                  href="https://www.nsl.pl"
+                  target="_blank"
+                  rel="noreferrer"
+                  className="mt-5 inline-flex items-center gap-2 text-sm font-semibold text-fuchsia-700 hover:text-fuchsia-800"
+                >
+                  Wejdź na nsl.pl <span aria-hidden>→</span>
+                </a>
               </div>
             </div>
           </div>
@@ -79,14 +86,13 @@ export default function NSLPage() {
           </h2>
           <div className="mt-8 grid gap-8 lg:grid-cols-2">
             <p className="text-base leading-7 text-muted sm:text-lg">
-              Społeczność powstała kilka lat temu w Trójmieście z inicjatywy mojej, jako agentki
-              nieruchomości z wizją współpracy. Zaczęło się niepozornie od małej grupy na Facebooku,
-              która miała skrócić pośrednikom drogę do wspólnego kontaktu.
+              To projekt, który wyrósł z czegoś prostego: grupy na Facebooku dla kilku agentów
+              z Trójmiasta, którzy chcieli wymieniać się ofertami dyskretnie i sprawnie.
             </p>
             <p className="text-base leading-7 text-muted sm:text-lg">
-              Szybko się okazało, że agentów, którzy chcą tak pracować i wyznają podobne wartości,
-              jest więcej. Dziś to społeczność, która liczy już 2 000 profesjonalistów w całej Polsce
-              i ciągle rośnie.
+              Dziś to ogólnopolska społeczność 20 000 zweryfikowanych pośredników w 8 regionach
+              Polski. Agenci NSL jako pierwsi w kraju dowiadują się o nieruchomościach, które nigdy
+              nie trafią na portale, i razem zamykają transakcje, które solo byłyby niemożliwe.
             </p>
           </div>
         </section>
@@ -170,7 +176,7 @@ export default function NSLPage() {
               <span className="italic text-fuchsia-700">Off Market 2025.</span>
             </h2>
             <p className="mt-6 max-w-2xl text-base leading-7 text-muted">
-              Społeczność została uhonorowana podczas XXV Gali Businesswoman Awards w uznaniu za
+              Społeczność została uhonorowana przez Businesswoman & Life w uznaniu za
               wyjątkowy wkład w budowanie nowoczesnego, etycznego i opartego na współpracy rynku
               nieruchomości w Polsce.
             </p>

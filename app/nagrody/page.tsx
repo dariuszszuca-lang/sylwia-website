@@ -4,7 +4,7 @@ import { SubpageLayout } from "@/components/SubpageLayout";
 export const metadata = {
   title: "Nagrody · Sylwia Wróblewska",
   description:
-    "Pionier Etycznego Rynku Nieruchomości Off Market 2025, wyróżnienie podczas XXV Gali Businesswoman Awards. Nieruchomości Spod Lady uhonorowane za wkład w nowoczesny, etyczny rynek.",
+    "Pionier Etycznego Rynku Nieruchomości Off Market 2025, wyróżnienie od Businesswoman & Life. Nieruchomości Spod Lady uhonorowane za wkład w nowoczesny, etyczny rynek.",
 };
 
 const kryteriaKapituly = [
@@ -25,7 +25,7 @@ export default function NagrodyPage() {
           <span className="italic text-fuchsia-700">Off Market 2025.</span>
         </>
       }
-      intro="Nieruchomości Spod Lady zostały uhonorowane podczas XXV Gali Businesswoman Awards w kategorii Pionier Etycznego Rynku Nieruchomości Off Market 2025."
+      intro="Nieruchomości Spod Lady zostały uhonorowane przez Businesswoman & Life w kategorii Pionier Etycznego Rynku Nieruchomości Off Market 2025. Odebrałam go w imieniu wszystkich agentów NSL, bo takie wyróżnienia nie należą do jednej osoby."
     >
       <div className="mx-auto max-w-5xl">
         {/* ZDJĘCIA STATUETKI + ODZNAKI */}
@@ -75,7 +75,7 @@ export default function NagrodyPage() {
             </div>
             <div className="text-base leading-8 text-muted sm:text-lg space-y-4">
               <p>
-                To wyróżnienie dla całej społeczności Nieruchomości Spod Lady. Dla 2 000 pośredników,
+                To wyróżnienie dla całej społeczności Nieruchomości Spod Lady. Dla 20 000 pośredników,
                 którzy każdego dnia pokazują, że agent nieruchomości to przewodnik, zaufany partner,
                 nie zbędne ogniwo.
               </p>

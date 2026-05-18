@@ -8,7 +8,7 @@ import { CategoryCircles } from "@/components/CategoryCircles";
 
 const metrics = [
   { value: "17", label: "lat praktyki na rynku nieruchomości" },
-  { value: "2 000", label: "agentów w społeczności Nieruchomości Spod Lady" },
+  { value: "20 000", label: "agentów NSL w 8 regionach Polski" },
   { value: "18311", label: "numer licencji zawodowej" },
 ];
 
@@ -26,7 +26,7 @@ const faqItems = [
   {
     question: "Czym jest Nieruchomości Spod Lady?",
     answer:
-      "To zamknięta społeczność ponad 2 000 pośredników nieruchomości w Polsce. Wymieniamy się ofertami off-market, zamykamy transakcje wspólnie, dzielimy się wiedzą. Jestem założycielką i liderem tej społeczności. W 2025 roku NSL zostało uhonorowane tytułem Pioniera Etycznego Rynku Nieruchomości Off Market.",
+      "To ogólnopolska społeczność 20 000 zweryfikowanych pośredników nieruchomości w 8 regionach Polski. Agenci NSL jako pierwsi dowiadują się o nieruchomościach, które nigdy nie trafią na portale, i razem zamykają transakcje, które solo byłyby niemożliwe. Jestem założycielką i liderem tej społeczności. W 2025 roku NSL otrzymało tytuł Pioniera Etycznego Rynku Nieruchomości Off Market od Businesswoman & Life.",
   },
   {
     question: "Czy prowadzę szkolenia dla biur i grup agentów?",
@@ -49,7 +49,7 @@ const jsonLd = {
       name: "Sylwia Paulina Wróblewska",
       jobTitle: "Pośredniczka nieruchomości, inwestorka, trenerka",
       description:
-        "Sylwia Wróblewska, pośredniczka nieruchomości z Trójmiasta, założycielka Nieruchomości Spod Lady (2000 agentów). Laureatka nagrody Pionier Etycznego Rynku Nieruchomości Off Market 2025.",
+        "Sylwia Wróblewska, pośrednik nieruchomości, przedsiębiorca, inwestor. Właścicielka biura Dom Hunter w Gdańsku. Założycielka Nieruchomości Spod Lady (20 000 agentów w 8 regionach Polski). Laureatka nagrody Pionier Etycznego Rynku Nieruchomości Off Market 2025, Businesswoman & Life.",
       image: "https://sylwiawroblewska.pl/images/sylwia-wroblewska.jpg",
       url: "https://sylwiawroblewska.pl",
       email: "mailto:swroblewska@domhunter.pl",
@@ -133,16 +133,18 @@ export default function Home() {
                   </span>
                 </h1>
 
-                <p className="mt-8 max-w-xl text-base leading-8 text-muted sm:text-lg">
-                  Sylwia Wróblewska. 17 lat na rynku nieruchomości, właścicielka butikowego biura{" "}
-                  <strong className="font-semibold text-foreground-soft">Dom Hunter Sp. z o.o.</strong>{" "}
-                  w Trójmieście, założycielka i lider społeczności{" "}
-                  <strong className="font-semibold text-foreground-soft">Nieruchomości Spod Lady</strong>,
-                  która zrzesza 2 000 agentów w Polsce.
+                <p className="mt-8 max-w-xl text-base leading-7 text-muted sm:text-lg">
+                  Pośrednik nieruchomości · Przedsiębiorca · Inwestor · Właścicielka biura{" "}
+                  <strong className="font-semibold text-foreground-soft">Dom Hunter</strong> w Gdańsku ·
+                  Założycielka <strong className="font-semibold text-foreground-soft">Nieruchomości Spod Lady®</strong>{" "}
+                  (20 000 agentów w 8 regionach Polski).
+                </p>
+                <p className="mt-3 max-w-xl font-mono text-xs uppercase tracking-[0.18em] text-muted-soft">
+                  Licencja zawodowa nr 18 311
                 </p>
 
                 <blockquote className="mt-8 max-w-xl border-l-2 border-fuchsia-500 pl-5 italic font-display text-lg leading-7 text-foreground-soft sm:text-xl sm:leading-8">
-                  „Wierzę, że współpraca szybciej niż rywalizacja pomaga osiągnąć sukces."
+                  „Wierzę, że największą siłą w tej branży jest współpraca, a nie rywalizacja."
                 </blockquote>
 
                 <div className="mt-10 flex flex-col gap-3 sm:flex-row">
@@ -172,7 +174,7 @@ export default function Home() {
                       Pionier Etycznego Rynku Nieruchomości Off Market
                     </p>
                     <p className="mt-1 text-[0.65rem] font-mono text-muted-soft tracking-wider uppercase">
-                      XXV Businesswoman Awards
+                      Businesswoman &amp; Life · 2025
                     </p>
                   </div>
                   <Image
@@ -227,6 +229,40 @@ export default function Home() {
                   <p className="mt-3 max-w-xs text-sm leading-7 text-muted">{item.label}</p>
                 </div>
               ))}
+            </div>
+          </div>
+        </section>
+
+        {/* ========== O MNIE (bio Sylwii) ========== */}
+        <section id="o-mnie" className="relative px-6 py-20 sm:px-8 lg:px-10 scroll-mt-24">
+          <div className="mx-auto max-w-3xl">
+            <div className="text-center mb-12">
+              <span className="kicker">O mnie</span>
+              <h2 className="display-tight mt-5 text-4xl font-medium leading-[1.02] text-foreground sm:text-5xl lg:text-6xl">
+                Moja <span className="italic text-fuchsia-700">historia.</span>
+              </h2>
+            </div>
+            <div className="space-y-6 text-base leading-7 text-foreground-soft sm:text-lg sm:leading-8">
+              <p>
+                Nieruchomościami żyję od ponad piętnastu lat. Dla nich rzuciłam bezpieczną pracę w korporacji.
+                Ale nie interesują mnie portale ani statystyki, interesują mnie ludzie i decyzje, które
+                zmieniają ich życie.
+              </p>
+              <p>
+                Zaczynałam jak większość: od budowania doświadczenia krok po kroku, transakcja po transakcji.
+                Z czasem jednak coraz wyraźniej widziałam, że branża potrzebuje czegoś więcej niż tylko ofert
+                i prowizji. Potrzebuje zaufania, standardu i przestrzeni, w której profesjonaliści mogą
+                naprawdę współpracować.
+              </p>
+              <p className="font-display italic text-xl text-foreground sm:text-2xl">
+                Tak powstało wszystko, czym się dziś zajmuję.
+              </p>
+              <div className="pt-6 border-t border-gold-line">
+                <p className="font-mono text-[0.7rem] uppercase tracking-[0.18em] text-fuchsia-700">Moje wartości</p>
+                <p className="mt-3 font-display italic text-lg text-foreground-soft sm:text-xl">
+                  Relacje. Zaufanie. Transparentność. Odwaga do działania inaczej.
+                </p>
+              </div>
             </div>
           </div>
         </section>
@@ -586,6 +622,7 @@ export default function Home() {
                   <p className="text-[0.65rem] font-mono uppercase tracking-[0.18em] text-gold-mid">Marki</p>
                   <div className="mt-3 flex flex-col gap-1.5 text-xs text-muted">
                     <Link href="/nsl" className="hover:text-fuchsia-700">NSL®</Link>
+                    <a href="https://www.nsl.pl" target="_blank" rel="noreferrer" className="hover:text-fuchsia-700">nsl.pl ↗</a>
                     <Link href="/biuro" className="hover:text-fuchsia-700">Dom Hunter</Link>
                     <Link href="/nagrody" className="hover:text-fuchsia-700">Nagrody</Link>
                     <Link href="/publikacje" className="hover:text-fuchsia-700">Publikacje</Link>
