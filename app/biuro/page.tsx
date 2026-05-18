@@ -3,7 +3,7 @@ import { SubpageLayout } from "@/components/SubpageLayout";
 export const metadata = {
   title: "Dom Hunter · Sylwia Wróblewska",
   description:
-    "Dom Hunter Sp. z o.o. — butikowe biuro nieruchomości w Trójmieście prowadzone przez Sylwię Wróblewską. Sprzedaż mieszkań, domów, działek, komercji i obiektów inwestycyjnych.",
+    "Dom Hunter Sp. z o.o., butikowe biuro nieruchomości w Trójmieście prowadzone przez Sylwię Wróblewską. Sprzedaż mieszkań, domów, działek, komercji i obiektów inwestycyjnych.",
 };
 
 const najwazniejszeTransakcje = [
@@ -39,7 +39,7 @@ export default function BiuroPage() {
           Dom Hunter <span className="italic text-fuchsia-700">Trójmiasto.</span>
         </>
       }
-      intro="Dom Hunter Sp. z o.o. — butikowe biuro nieruchomości w Trójmieście. Mała liczba projektów rocznie, dyskrecja, praca na relację. Sprzedaż wtórna, pierwotna, działki, obiekty komercyjne i inwestycyjne."
+      intro="Dom Hunter Sp. z o.o., butikowe biuro nieruchomości w Trójmieście. Mała liczba projektów rocznie, dyskrecja, praca na relację. Sprzedaż wtórna, pierwotna, działki, obiekty komercyjne i inwestycyjne."
     >
       <div className="mx-auto max-w-5xl">
         {/* NAJWAŻNIEJSZE TRANSAKCJE */}

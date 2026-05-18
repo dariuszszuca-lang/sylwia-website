@@ -4,7 +4,7 @@ import { SubpageLayout } from "@/components/SubpageLayout";
 export const metadata = {
   title: "Nagrody · Sylwia Wróblewska",
   description:
-    "Pionier Etycznego Rynku Nieruchomości Off Market 2025 — wyróżnienie podczas XXV Gali Businesswoman Awards. Nieruchomości Spod Lady uhonorowane za wkład w nowoczesny, etyczny rynek.",
+    "Pionier Etycznego Rynku Nieruchomości Off Market 2025, wyróżnienie podczas XXV Gali Businesswoman Awards. Nieruchomości Spod Lady uhonorowane za wkład w nowoczesny, etyczny rynek.",
 };
 
 const kryteriaKapituly = [

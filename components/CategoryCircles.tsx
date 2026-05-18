@@ -5,7 +5,7 @@ type Category = {
   id: string;
   label: string;
   href: string;
-  /** Ścieżka do zdjęcia (z public/) — opcjonalna, jeśli brak, używamy ikony. */
+  /** Ścieżka do zdjęcia (z public/), opcjonalna; jeśli brak, używamy ikony. */
   image?: string;
   /** Inline SVG ikona (używana, gdy brak zdjęcia). */
   icon: React.ReactNode;
