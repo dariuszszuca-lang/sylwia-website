@@ -247,20 +247,13 @@ export default function Home() {
                     Zobacz więcej o nagrodzie <span aria-hidden>→</span>
                   </Link>
                 </div>
-                <div className="flex flex-col items-center justify-center gap-6 sm:flex-row">
+                <div className="flex items-center justify-center">
                   <Image
-                    src="/images/nagrody/statuetka.png"
-                    alt="Statuetka Pionier Etycznego Rynku Nieruchomości Off Market 2025"
-                    width={200}
-                    height={400}
-                    className="h-auto w-auto max-h-[14rem] sm:max-h-[18rem] object-contain drop-shadow-[0_24px_40px_rgba(122,82,16,0.25)]"
-                  />
-                  <Image
-                    src="/images/nagrody/odznaka-pioniera.png"
-                    alt="Odznaka Pionier Etycznego Rynku Nieruchomości Off Market 2025"
-                    width={180}
-                    height={180}
-                    className="h-auto w-auto max-h-[8rem] sm:max-h-[10rem] object-contain drop-shadow-[0_12px_24px_rgba(122,82,16,0.2)]"
+                    src="/images/nagrody/nagroda-pelna.png"
+                    alt="Pionier Etycznego Rynku Nieruchomości Off Market 2025 — statuetka i odznaka"
+                    width={520}
+                    height={520}
+                    className="h-auto w-full max-w-[28rem] object-contain drop-shadow-[0_30px_50px_rgba(122,82,16,0.18)]"
                   />
                 </div>
               </div>
