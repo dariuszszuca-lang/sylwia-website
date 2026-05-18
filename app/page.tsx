@@ -241,6 +241,115 @@ export default function Home() {
           </div>
         </section>
 
+        {/* ========== GŁÓWNE OBSZARY (4 karty z menu) ========== */}
+        <section className="relative px-6 py-20 sm:px-8 lg:px-10">
+          <div className="mx-auto max-w-7xl">
+            <div className="mb-12">
+              <span className="kicker">Główne obszary</span>
+              <h2 className="display-tight mt-5 max-w-3xl text-4xl font-medium leading-[1.02] text-foreground sm:text-5xl">
+                Cztery filary <span className="italic text-fuchsia-700">mojej pracy.</span>
+              </h2>
+            </div>
+
+            <div className="grid gap-5 md:grid-cols-2">
+              {[
+                {
+                  href: "/posrednictwo",
+                  label: "Pośrednictwo",
+                  num: "01",
+                  text: "Butikowe biuro Dom Hunter w Trójmieście. Sprzedaż off-market, indywidualne podejście, większość klientów z polecenia.",
+                },
+                {
+                  href: "/inwestowanie",
+                  label: "Inwestowanie",
+                  num: "02",
+                  text: "Doradztwo dla inwestorów. Wybór mieszkania pod wynajem, flip lub długoterminowy portfel, przeliczenie rentowności przed decyzją.",
+                },
+                {
+                  href: "/szkolenia",
+                  label: "Szkolenia",
+                  num: "03",
+                  text: "Autorskie warsztaty „Jak pracować, żeby każde zlecenie było rentowne”. 3 500 zł brutto, do 17 osób, zwracają się po pierwszej umowie.",
+                },
+                {
+                  href: "/wystapienia",
+                  label: "Wystąpienia",
+                  num: "04",
+                  text: "Konferencje branżowe, panele eksperckie i wystąpienia medialne. Tematy: rynek off-market, etyka zawodu, marka osobista pośrednika.",
+                },
+              ].map((s) => (
+                <Link
+                  key={s.href}
+                  href={s.href}
+                  className="premium-panel champagne-line rounded-3xl p-8 transition-all hover:-translate-y-1 hover:border-fuchsia-300 group"
+                >
+                  <div className="flex items-baseline justify-between">
+                    <span className="kicker">{s.label}</span>
+                    <span className="font-display italic text-2xl text-gold-glow text-fuchsia-300 group-hover:text-fuchsia-500">
+                      {s.num}
+                    </span>
+                  </div>
+                  <h3 className="display-tight mt-4 text-2xl font-medium leading-tight text-foreground sm:text-3xl">
+                    {s.label}
+                  </h3>
+                  <p className="mt-4 text-base leading-7 text-muted">{s.text}</p>
+                  <span className="mt-6 inline-flex items-center gap-2 text-sm font-medium text-foreground group-hover:text-fuchsia-700">
+                    Zobacz więcej <span className="transition-transform group-hover:translate-x-1" aria-hidden>→</span>
+                  </span>
+                </Link>
+              ))}
+            </div>
+          </div>
+        </section>
+
+        {/* ========== OPINIE ========== */}
+        <section className="relative px-6 py-20 sm:px-8 lg:px-10">
+          <div className="mx-auto max-w-7xl">
+            <div className="mb-12">
+              <span className="kicker">Opinie</span>
+              <h2 className="display-tight mt-5 max-w-3xl text-4xl font-medium leading-[1.02] text-foreground sm:text-5xl">
+                Co mówią <span className="italic text-fuchsia-700">klienci i kursanci.</span>
+              </h2>
+            </div>
+
+            <div className="grid gap-5 md:grid-cols-2">
+              {[
+                {
+                  text: "Bardzo polecam! Nie wierzyłam, że tak szybko można sprzedać mieszkanie z rynku wtórnego w tak trudnym czasie, gdzie inni zawiedli. Tu było inaczej, było szybko, sprawnie i bez obietnic bez pokrycia. W dwa tygodnie miałam akt notarialny w ręku i pieniądze na koncie.",
+                  author: "Magda",
+                  location: "Opinia z Google",
+                },
+                {
+                  text: "Bardzo polecam współpracę z Dom Hunter Biuro Nieruchomości, a szczególnie z Panią Sylwią. Proces sprzedaży nie był prosty ze względu na trudnego lokatora. Pani Sylwia zdołała jednak pokonać wszelkie trudności i z sukcesem zamknąć transakcję.",
+                  author: "Przemysław Klimkowski",
+                  location: "Klient Dom Hunter, Trójmiasto",
+                },
+                {
+                  text: "Dziękuję za przeprowadzenie warsztatu na wysokim poziomie merytorycznym. Ogrom przekazanej wiedzy, konkretne przykłady oraz praktyczne podejście sprawiły, że było to niezwykle wartościowe doświadczenie. Prowizja przy podpisaniu umowy pośrednictwa, zrealizowana.",
+                  author: "Beata Pietrasińska",
+                  location: "Kursantka, Śląsk",
+                },
+                {
+                  text: "Brawo Sylwia i dziękuję za zaproszenie! Jedno z lepszych szkoleń, na jakich byłem, a byłem na wielu. Świetny pomysł z przedstawieniem się wszystkich uczestników na początku, od razu zrobiło się bardziej familijnie. Czysty konkret poparty przykładami z życia. Może to być dla mojego biura game changer.",
+                  author: "Konrad Bajerski",
+                  location: "Kursant, Trójmiasto",
+                },
+              ].map((o) => (
+                <article key={o.author} className="premium-panel rounded-3xl p-8">
+                  <div className="text-fuchsia-500 text-sm tracking-widest">★★★★★</div>
+                  <p className="mt-5 italic font-display text-base leading-7 text-foreground-soft sm:text-lg sm:leading-8">
+                    „{o.text}”
+                  </p>
+                  <div className="mt-6 border-t border-border pt-5">
+                    <p className="font-semibold text-foreground">{o.author}</p>
+                    <p className="text-xs text-muted-soft uppercase tracking-widest mt-1">{o.location}</p>
+                  </div>
+                </article>
+              ))}
+            </div>
+          </div>
+        </section>
+
         {/* ========== FAQ ========== */}
         <section id="faq" className="relative px-6 py-20 sm:px-8 lg:px-10 scroll-mt-24">
           <div className="mx-auto max-w-7xl">
@@ -336,6 +445,9 @@ export default function Home() {
                     <Link href="/publikacje" className="hover:text-fuchsia-700">Publikacje</Link>
                     <Link href="/konsultacje" className="hover:text-fuchsia-700">
                       Konsultacje 1:1
+                    </Link>
+                    <Link href="/kontakt" className="hover:text-fuchsia-700">
+                      Kontakt
                     </Link>
                   </div>
                 </div>

@@ -73,9 +73,9 @@ export function SiteHeader() {
             })}
           </nav>
 
-          <a href="mailto:swroblewska@domhunter.pl" className="btn-luxe hidden md:inline-flex">
+          <Link href="/kontakt" className="btn-luxe hidden md:inline-flex">
             Kontakt
-          </a>
+          </Link>
 
           <button
             type="button"
@@ -116,13 +116,13 @@ export function SiteHeader() {
                 </Link>
               );
             })}
-            <a
-              href="mailto:swroblewska@domhunter.pl"
+            <Link
+              href="/kontakt"
               onClick={() => setMenuOpen(false)}
               className="btn-luxe inline-flex mobile-nav-cta"
             >
               Kontakt
-            </a>
+            </Link>
           </nav>
         </div>
       </div>
