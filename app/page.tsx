@@ -233,35 +233,82 @@ export default function Home() {
           </div>
         </section>
 
-        {/* ========== O MNIE (bio Sylwii) ========== */}
-        <section id="o-mnie" className="relative px-6 py-20 sm:px-8 lg:px-10 scroll-mt-24">
-          <div className="mx-auto max-w-3xl">
-            <div className="text-center mb-12">
-              <span className="kicker">O mnie</span>
-              <h2 className="display-tight mt-5 text-4xl font-medium leading-[1.02] text-foreground sm:text-5xl lg:text-6xl">
-                Moja <span className="italic text-fuchsia-700">historia.</span>
-              </h2>
-            </div>
-            <div className="space-y-6 text-base leading-7 text-foreground-soft sm:text-lg sm:leading-8">
-              <p>
-                Nieruchomościami żyję od ponad piętnastu lat. Dla nich rzuciłam bezpieczną pracę w korporacji.
-                Ale nie interesują mnie portale ani statystyki, interesują mnie ludzie i decyzje, które
-                zmieniają ich życie.
-              </p>
-              <p>
-                Zaczynałam jak większość: od budowania doświadczenia krok po kroku, transakcja po transakcji.
-                Z czasem jednak coraz wyraźniej widziałam, że branża potrzebuje czegoś więcej niż tylko ofert
-                i prowizji. Potrzebuje zaufania, standardu i przestrzeni, w której profesjonaliści mogą
-                naprawdę współpracować.
-              </p>
-              <p className="font-display italic text-xl text-foreground sm:text-2xl">
-                Tak powstało wszystko, czym się dziś zajmuję.
-              </p>
-              <div className="pt-6 border-t border-gold-line">
-                <p className="font-mono text-[0.7rem] uppercase tracking-[0.18em] text-fuchsia-700">Moje wartości</p>
-                <p className="mt-3 font-display italic text-lg text-foreground-soft sm:text-xl">
-                  Relacje. Zaufanie. Transparentność. Odwaga do działania inaczej.
-                </p>
+        {/* ========== O MNIE (bio Sylwii) — magazine layout ========== */}
+        <section id="o-mnie" className="relative px-6 py-24 sm:px-8 lg:px-10 scroll-mt-24">
+          {/* Glow tła */}
+          <div className="pointer-events-none absolute inset-0 -z-10">
+            <div className="absolute left-[8%] top-[15%] h-[28rem] w-[28rem] rounded-full bg-fuchsia-200/25 blur-[140px]" />
+            <div className="absolute right-[5%] bottom-[10%] h-[24rem] w-[24rem] rounded-full bg-champagne-200/40 blur-[120px]" />
+          </div>
+
+          <div className="mx-auto max-w-6xl">
+            <div className="grid gap-12 lg:grid-cols-[0.42fr_0.58fr] lg:items-start">
+              {/* PORTRET + floating badge */}
+              <div className="relative">
+                <div className="portrait-frame aspect-[3/4] w-full max-w-[24rem] mx-auto lg:mx-0">
+                  <Image
+                    src="/images/sylwia/kapelusz.jpg"
+                    alt="Sylwia Wróblewska"
+                    fill
+                    sizes="(min-width: 1024px) 24rem, (min-width: 640px) 60vw, 100vw"
+                    className="object-cover object-top"
+                  />
+                </div>
+                {/* Floating badge: 15 lat */}
+                <div className="absolute -bottom-5 -left-3 sm:-left-5 rounded-2xl bg-gradient-to-br from-fuchsia-600 to-fuchsia-800 px-5 py-3 shadow-[0_18px_40px_-8px_rgba(196,48,119,0.5)] rotate-[-3deg]">
+                  <p className="text-[0.6rem] font-mono uppercase tracking-[0.18em] text-fuchsia-100">Od ponad</p>
+                  <p className="mt-0.5 font-display italic text-2xl text-white leading-none">15 lat</p>
+                </div>
+                {/* Decoracyjny element prawy górny */}
+                <div className="absolute -top-3 -right-3 hidden sm:flex h-16 w-16 items-center justify-center rounded-full bg-champagne-50 border border-champagne-200 shadow-md rotate-[6deg]">
+                  <span className="font-display italic text-2xl text-champagne-400">✦</span>
+                </div>
+              </div>
+
+              {/* TEKST */}
+              <div>
+                <span className="kicker">O mnie</span>
+                <h2 className="display-tight mt-5 text-4xl font-medium leading-[1.02] text-foreground sm:text-5xl lg:text-6xl">
+                  Moja <span className="italic text-fuchsia-700">historia.</span>
+                </h2>
+
+                <div className="mt-8 space-y-5 text-base leading-7 text-foreground-soft sm:text-lg sm:leading-8">
+                  <p className="first-letter:font-display first-letter:text-6xl first-letter:font-medium first-letter:text-fuchsia-700 first-letter:float-left first-letter:mr-3 first-letter:leading-[0.9] first-letter:mt-1">
+                    Nieruchomościami żyję od ponad piętnastu lat. Dla nich rzuciłam bezpieczną pracę
+                    w korporacji. Ale nie interesują mnie portale ani statystyki, interesują mnie
+                    ludzie i decyzje, które zmieniają ich życie.
+                  </p>
+                  <p>
+                    Zaczynałam jak większość: od budowania doświadczenia krok po kroku, transakcja po
+                    transakcji. Z czasem jednak coraz wyraźniej widziałam, że branża potrzebuje czegoś
+                    więcej niż tylko ofert i prowizji. Potrzebuje zaufania, standardu i przestrzeni,
+                    w której profesjonaliści mogą naprawdę współpracować.
+                  </p>
+                </div>
+
+                {/* Pull quote */}
+                <blockquote className="mt-8 border-l-2 border-fuchsia-500 pl-6 font-display italic text-xl leading-snug text-foreground sm:text-2xl">
+                  Tak powstało wszystko, czym się dziś zajmuję.
+                </blockquote>
+
+                {/* Wartości jako pills */}
+                <div className="mt-10 pt-7 border-t border-gold-line">
+                  <p className="font-mono text-[0.65rem] uppercase tracking-[0.2em] text-fuchsia-700">
+                    Moje wartości
+                  </p>
+                  <div className="mt-4 flex flex-wrap gap-2">
+                    {["Relacje", "Zaufanie", "Transparentność", "Odwaga do działania inaczej"].map(
+                      (v) => (
+                        <span
+                          key={v}
+                          className="rounded-full border border-fuchsia-300 bg-fuchsia-50 px-4 py-1.5 font-display italic text-sm text-fuchsia-700"
+                        >
+                          {v}
+                        </span>
+                      ),
+                    )}
+                  </div>
+                </div>
               </div>
             </div>
           </div>
