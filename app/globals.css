@@ -1166,4 +1166,242 @@ details.faq-item summary::-webkit-details-marker {
   font-size: 0.9rem;
 }
 
+/* ============ LOGO TEXT (kropka + imię + nazwisko + role) ============ */
+.logo-stack {
+  display: inline-flex;
+  flex-direction: column;
+  gap: 0.15rem;
+  line-height: 1;
+}
+
+.logo-row {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.55rem;
+}
+
+.logo-name {
+  font-family: var(--font-display), Georgia, serif;
+  font-weight: 500;
+  font-size: 1.1rem;
+  line-height: 1;
+  letter-spacing: -0.01em;
+}
+
+.logo-stack-compact .logo-name {
+  font-size: 1rem;
+}
+
+.logo-first {
+  color: var(--foreground);
+}
+
+.logo-last {
+  color: var(--fuchsia-600);
+}
+
+.logo-roles {
+  font-family: var(--font-mono), ui-monospace, monospace;
+  font-size: 0.625rem;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: var(--muted);
+  padding-left: 1.45rem;
+}
+
+.logo-stack-compact .logo-roles {
+  font-size: 0.55rem;
+  padding-left: 1.3rem;
+}
+
+/* ============ CATEGORY CIRCLES (8 fuksjowych kół) ============ */
+.category-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 2rem 1.5rem;
+  max-width: 64rem;
+  margin: 0 auto;
+}
+
+@media (max-width: 900px) {
+  .category-grid {
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1.5rem 1rem;
+  }
+}
+
+@media (max-width: 600px) {
+  .category-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1.25rem 0.75rem;
+  }
+}
+
+.category-circle {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-decoration: none;
+  transition: transform 0.35s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.category-circle:hover {
+  transform: translateY(-4px);
+}
+
+.category-circle-inner {
+  position: relative;
+  width: 100%;
+  aspect-ratio: 1;
+  border-radius: 50%;
+  overflow: hidden;
+  background: linear-gradient(135deg, #e9479c 0%, #c43077 50%, #82184c 100%);
+  box-shadow:
+    0 12px 30px -8px rgba(196, 48, 119, 0.45),
+    0 2px 6px rgba(21, 19, 28, 0.1),
+    inset 0 1px 0 rgba(255, 255, 255, 0.25);
+  transition: box-shadow 0.35s ease;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.category-circle:hover .category-circle-inner {
+  box-shadow:
+    0 18px 44px -8px rgba(196, 48, 119, 0.6),
+    0 4px 10px rgba(21, 19, 28, 0.12),
+    inset 0 1px 0 rgba(255, 255, 255, 0.32);
+}
+
+.category-circle-image {
+  object-fit: cover;
+  z-index: 1;
+}
+
+.category-circle-overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    180deg,
+    rgba(196, 48, 119, 0.35) 0%,
+    rgba(130, 24, 76, 0.7) 100%
+  );
+  z-index: 2;
+  pointer-events: none;
+}
+
+.category-circle-icon {
+  position: relative;
+  z-index: 3;
+  display: flex;
+  width: 38%;
+  height: 38%;
+  color: rgba(255, 255, 255, 0.95);
+  filter: drop-shadow(0 2px 4px rgba(0, 0, 0, 0.2));
+}
+
+.category-circle-label {
+  position: absolute;
+  z-index: 3;
+  bottom: 18%;
+  left: 50%;
+  transform: translateX(-50%);
+  color: #fff;
+  font-family: var(--font-sans);
+  font-weight: 600;
+  font-size: clamp(0.75rem, 1.1vw, 0.95rem);
+  letter-spacing: -0.005em;
+  text-align: center;
+  text-shadow: 0 1px 3px rgba(0, 0, 0, 0.3);
+  padding: 0 0.5rem;
+  width: 100%;
+  pointer-events: none;
+}
+
+/* Wersja z ikoną (bez zdjęcia) — label na środku zamiast na dole */
+.category-circle-inner:not(:has(.category-circle-image)) .category-circle-icon {
+  transform: translateY(-12%);
+}
+
+.category-circle-inner:not(:has(.category-circle-image)) .category-circle-label {
+  bottom: 22%;
+}
+
+/* ============ AWARD BADGE (floating w hero) ============ */
+.award-badge {
+  display: inline-flex;
+  align-items: flex-start;
+  gap: 0.85rem;
+  padding: 0.85rem 1.1rem;
+  border-radius: 1.25rem;
+  background: linear-gradient(135deg, #fdf2f8 0%, #fef3e2 100%);
+  border: 1px solid rgba(196, 48, 119, 0.25);
+  box-shadow:
+    0 18px 40px -8px rgba(196, 48, 119, 0.32),
+    0 4px 10px rgba(21, 19, 28, 0.1),
+    inset 0 1px 0 rgba(255, 255, 255, 0.7);
+  text-decoration: none;
+  transition: transform 0.3s cubic-bezier(0.16, 1, 0.3, 1), box-shadow 0.3s ease;
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+}
+
+.award-badge:hover {
+  transform: translateY(-3px) rotate(-1deg);
+  box-shadow:
+    0 24px 50px -8px rgba(196, 48, 119, 0.42),
+    0 6px 14px rgba(21, 19, 28, 0.12),
+    inset 0 1px 0 rgba(255, 255, 255, 0.8);
+}
+
+.award-badge-icon {
+  display: grid;
+  place-items: center;
+  width: 2.5rem;
+  height: 2.5rem;
+  flex-shrink: 0;
+  border-radius: 50%;
+  background: linear-gradient(135deg, #c43077 0%, #82184c 100%);
+  color: #fdf2f8;
+  box-shadow: 0 4px 10px rgba(196, 48, 119, 0.4);
+}
+
+.award-badge-icon svg {
+  width: 1.25rem;
+  height: 1.25rem;
+}
+
+.award-badge-text {
+  display: flex;
+  flex-direction: column;
+  gap: 0.15rem;
+}
+
+.award-badge-kicker {
+  font-family: var(--font-mono);
+  font-size: 0.6rem;
+  font-weight: 600;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: var(--fuchsia-700);
+}
+
+.award-badge-title {
+  font-family: var(--font-display);
+  font-style: italic;
+  font-weight: 500;
+  font-size: 0.85rem;
+  line-height: 1.15;
+  color: var(--foreground);
+  letter-spacing: -0.015em;
+}
+
+.award-badge-meta {
+  font-family: var(--font-mono);
+  font-size: 0.55rem;
+  letter-spacing: 0.1em;
+  color: var(--muted-soft);
+  margin-top: 0.15rem;
+}
+
 } /* end @layer components */

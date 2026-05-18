@@ -1,13 +1,13 @@
 "use client";
 
 import { useEffect, useState } from "react";
-import { BrandMark } from "./BrandMark";
+import { LogoText } from "./LogoText";
 
 const NAV = [
-  { href: "#sylwia", id: "sylwia", label: "Sylwia" },
-  { href: "#konsultacja", id: "konsultacja", label: "Konsultacja" },
-  { href: "#projekty", id: "projekty", label: "Projekty" },
-  { href: "#faq", id: "faq", label: "FAQ" },
+  { href: "#posrednictwo", id: "posrednictwo", label: "Pośrednictwo" },
+  { href: "#inwestowanie", id: "inwestowanie", label: "Inwestowanie" },
+  { href: "#szkolenia", id: "szkolenia", label: "Szkolenia" },
+  { href: "#wystapienia", id: "wystapienia", label: "Wystąpienia" },
 ];
 
 export function SiteHeader() {
@@ -85,14 +85,11 @@ export function SiteHeader() {
         >
           <a
             href="#top"
-            className="group flex items-center gap-3 pr-2"
+            className="group flex items-center pr-2"
             aria-label="Sylwia Wróblewska — strona główna"
             onClick={() => setMenuOpen(false)}
           >
-            <BrandMark size={36} className="brand-mark-header" />
-            <span className="brand-name hidden min-[480px]:inline-block">
-              Sylwia Wróblewska
-            </span>
+            <LogoText compact />
           </a>
 
           <nav aria-label="Główna nawigacja" className="hidden items-center gap-1 md:flex">
@@ -112,8 +109,8 @@ export function SiteHeader() {
             })}
           </nav>
 
-          <a href="#konsultacja" className="btn-luxe hidden md:inline-flex">
-            Umów konsultację
+          <a href="#kontakt" className="btn-luxe hidden md:inline-flex">
+            Kontakt
           </a>
 
           <button
@@ -156,11 +153,11 @@ export function SiteHeader() {
               );
             })}
             <a
-              href="#konsultacja"
+              href="#kontakt"
               onClick={() => setMenuOpen(false)}
               className="btn-luxe inline-flex mobile-nav-cta"
             >
-              Umów konsultację · 300 zł / h
+              Kontakt
             </a>
           </nav>
         </div>
