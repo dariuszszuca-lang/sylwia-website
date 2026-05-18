@@ -308,52 +308,104 @@ export default function Home() {
 
         {/* ========== INWESTOWANIE (z perspektywy inwestora) ========== */}
         <section className="relative px-6 py-20 sm:px-8 lg:px-10">
+          {/* Glow tła */}
+          <div className="pointer-events-none absolute inset-0 -z-10">
+            <div className="absolute left-[8%] top-[15%] h-[28rem] w-[28rem] rounded-full bg-fuchsia-300/25 blur-[120px]" />
+            <div className="absolute right-[5%] bottom-[10%] h-[24rem] w-[24rem] rounded-full bg-champagne-200/40 blur-[100px]" />
+          </div>
+
           <div className="mx-auto max-w-7xl">
             <div className="premium-panel champagne-line rounded-[2.5rem] px-8 py-14 sm:px-12 lg:px-16">
-              <div className="grid gap-12 lg:grid-cols-[0.45fr_0.55fr] lg:items-start">
+              {/* HERO sekcji: portret + tekst */}
+              <div className="grid gap-12 lg:grid-cols-[0.42fr_0.58fr] lg:items-center">
+                {/* Portret z floating badge */}
+                <div className="relative mx-auto lg:ml-0 w-full max-w-[22rem]">
+                  <div className="portrait-frame aspect-[3/4] w-full">
+                    <Image
+                      src="/images/sylwia/inwestowanie.jpg"
+                      alt="Sylwia Wróblewska, inwestor i przedsiębiorca"
+                      fill
+                      sizes="(min-width: 1024px) 22rem, (min-width: 640px) 60vw, 100vw"
+                      className="object-cover object-top"
+                    />
+                  </div>
+                  {/* Floating badge: 17 lat */}
+                  <div className="absolute -bottom-5 -right-3 sm:-right-5 rounded-2xl bg-gradient-to-br from-fuchsia-600 to-fuchsia-800 px-5 py-3 shadow-[0_18px_40px_-8px_rgba(196,48,119,0.5)] rotate-[-3deg]">
+                    <p className="text-[0.6rem] font-mono uppercase tracking-[0.18em] text-fuchsia-100">Inwestor</p>
+                    <p className="mt-0.5 font-display italic text-2xl text-white leading-none">17 lat</p>
+                  </div>
+                  {/* Decoracyjny element po lewej górze */}
+                  <div className="absolute -top-3 -left-3 hidden sm:flex h-16 w-16 items-center justify-center rounded-full bg-champagne-50 border border-champagne-200 shadow-md rotate-[6deg]">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" className="h-8 w-8 text-champagne-400">
+                      <path d="M3 18l6-6 4 4 8-10M13 6h7v7" strokeLinecap="round" strokeLinejoin="round" />
+                    </svg>
+                  </div>
+                </div>
+
+                {/* Tekst */}
                 <div>
-                  <span className="kicker">Z perspektywy inwestora</span>
+                  <span className="kicker text-fuchsia-700">Z perspektywy inwestora</span>
                   <h2 className="display-tight mt-5 text-4xl font-medium leading-[1.02] text-foreground sm:text-5xl">
                     Wybór mieszkania to nie tylko{" "}
                     <span className="italic text-fuchsia-700">cena za metr.</span>
                   </h2>
-                  <p className="mt-6 max-w-lg text-base leading-7 text-muted sm:text-lg">
+                  <p className="mt-6 text-base leading-7 text-muted sm:text-lg">
                     Sama inwestuję i jestem przedsiębiorcą. Wiem co liczyć i co przeoczyć łatwo, jeśli
                     patrzysz tylko na ofertę z portalu.
                   </p>
                   <Link
                     href="/inwestowanie"
-                    className="mt-8 inline-flex items-center gap-2 text-sm font-medium text-foreground hover:text-fuchsia-700 group"
+                    className="mt-8 inline-flex items-center gap-2 rounded-full bg-foreground px-5 py-2.5 text-sm font-medium text-background hover:bg-fuchsia-700 transition-colors group"
                   >
                     Zobacz więcej o inwestowaniu{" "}
                     <span className="transition-transform group-hover:translate-x-1" aria-hidden>→</span>
                   </Link>
                 </div>
+              </div>
 
-                <div className="grid gap-4 sm:grid-cols-3">
-                  {[
-                    {
-                      label: "Pod wynajem",
-                      text: "Długoterminowy, krótkoterminowy, instytucjonalny.",
-                    },
-                    {
-                      label: "Pod flip",
-                      text: "Lokale do remontu, podziału, zmiany funkcji.",
-                    },
-                    {
-                      label: "Pod portfel",
-                      text: "Budowa portfela nieruchomości w Trójmieście.",
-                    },
-                  ].map((t) => (
-                    <div
-                      key={t.label}
-                      className="rounded-2xl border border-border bg-background-soft/60 p-5"
-                    >
-                      <p className="kicker text-fuchsia-700">{t.label}</p>
-                      <p className="mt-3 text-sm leading-6 text-foreground-soft">{t.text}</p>
+              {/* 3 karty z ikonami */}
+              <div className="mt-14 grid gap-5 sm:grid-cols-3">
+                {[
+                  {
+                    label: "Pod wynajem",
+                    text: "Długoterminowy, krótkoterminowy, instytucjonalny.",
+                    icon: (
+                      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.7">
+                        <path d="M3 21V10l9-7 9 7v11M10 21v-7h4v7" strokeLinecap="round" strokeLinejoin="round" />
+                      </svg>
+                    ),
+                  },
+                  {
+                    label: "Pod flip",
+                    text: "Lokale do remontu, podziału, zmiany funkcji.",
+                    icon: (
+                      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.7">
+                        <path d="M3 12a9 9 0 0115-6.7L21 8M21 12a9 9 0 01-15 6.7L3 16M21 3v5h-5M3 21v-5h5" strokeLinecap="round" strokeLinejoin="round" />
+                      </svg>
+                    ),
+                  },
+                  {
+                    label: "Pod portfel",
+                    text: "Budowa portfela nieruchomości w Trójmieście.",
+                    icon: (
+                      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.7">
+                        <rect x="3" y="7" width="18" height="13" rx="2" />
+                        <path d="M8 7V5a2 2 0 012-2h4a2 2 0 012 2v2M3 13h18" strokeLinecap="round" strokeLinejoin="round" />
+                      </svg>
+                    ),
+                  },
+                ].map((t) => (
+                  <div
+                    key={t.label}
+                    className="group relative rounded-2xl border-2 border-border bg-background-soft p-6 transition-all duration-300 hover:border-fuchsia-500 hover:-translate-y-2 hover:shadow-[0_18px_40px_-12px_rgba(196,48,119,0.35)]"
+                  >
+                    <div className="mb-4 inline-flex h-12 w-12 items-center justify-center rounded-full bg-fuchsia-100 text-fuchsia-700 transition-all duration-300 group-hover:bg-gradient-to-br group-hover:from-fuchsia-500 group-hover:to-fuchsia-700 group-hover:text-white group-hover:scale-110 group-hover:rotate-[-6deg]">
+                      {t.icon}
                     </div>
-                  ))}
-                </div>
+                    <p className="kicker text-fuchsia-700">{t.label}</p>
+                    <p className="mt-3 text-sm leading-6 text-foreground-soft">{t.text}</p>
+                  </div>
+                ))}
               </div>
 
               <div className="mt-10 border-t border-gold-line pt-8">
