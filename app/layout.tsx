@@ -26,26 +26,31 @@ const mono = Geist_Mono({
 export const metadata: Metadata = {
   metadataBase: new URL("https://sylwiawroblewska.pl"),
   title: {
-    default: "Sylwia Wróblewska | Strategia sprzedaży nieruchomości i konsultacje 1:1",
+    default: "Sylwia Wróblewska | Pośrednik, inwestor, trener · Trójmiasto",
     template: "%s | Sylwia Wróblewska",
   },
   description:
-    "Butikowa marka osobista Sylwii Wróblewskiej: sprzedaż nieruchomości premium, konsultacje dla pośredników, strategia off-market i szkolenia dla branży.",
+    "Sylwia Wróblewska. 17 lat na rynku nieruchomości, właścicielka biura Dom Hunter w Trójmieście, założycielka Nieruchomości Spod Lady (2 000 agentów). Laureatka nagrody Pionier Etycznego Rynku Off Market 2025.",
   keywords: [
     "Sylwia Wróblewska",
-    "nieruchomości Trójmiasto",
-    "konsultacje dla agentów nieruchomości",
-    "off-market",
+    "Dom Hunter Trójmiasto",
     "Nieruchomości Spod Lady",
-    "sprzedaż nieruchomości premium",
+    "NSL",
+    "pośrednik nieruchomości Gdańsk",
+    "off-market nieruchomości",
+    "Pionier Etycznego Rynku 2025",
+    "szkolenia dla pośredników",
+    "warsztaty dla agentów nieruchomości",
+    "mentoring pośredników nieruchomości",
+    "inwestowanie w nieruchomości Trójmiasto",
   ],
   alternates: {
     canonical: "/",
   },
   openGraph: {
-    title: "Sylwia Wróblewska | Sprzedaż nieruchomości, konsultacje i szkolenia",
+    title: "Sylwia Wróblewska | Pośrednik, inwestor, trener · Trójmiasto",
     description:
-      "Nowoczesna strona wizytówkowa Sylwii Wróblewskiej. Strategia sprzedaży, konsultacje 1:1 za 300 zł/h i wiedza z rynku off-market.",
+      "17 lat na rynku nieruchomości. Dom Hunter w Trójmieście, społeczność Nieruchomości Spod Lady (2 000 agentów), Pionier Etycznego Rynku Off Market 2025.",
     url: "https://sylwiawroblewska.pl",
     siteName: "Sylwia Wróblewska",
     locale: "pl_PL",
@@ -61,9 +66,9 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "Sylwia Wróblewska | Konsultacje i strategia nieruchomości",
+    title: "Sylwia Wróblewska | Pośrednik, inwestor, trener",
     description:
-      "Butikowa marka osobista dla klientów premium i pośredników, którzy chcą działać skuteczniej.",
+      "17 lat na rynku nieruchomości. Dom Hunter Trójmiasto, społeczność NSL, Pionier Etycznego Rynku 2025.",
     images: ["/images/sylwia-wroblewska.jpg"],
   },
   robots: {
