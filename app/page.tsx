@@ -5,7 +5,6 @@ import { FAQAccordion } from "@/components/FAQAccordion";
 import { NewsletterForm } from "@/components/NewsletterForm";
 import { LogoText } from "@/components/LogoText";
 import { CategoryCircles } from "@/components/CategoryCircles";
-import { AwardBadge } from "@/components/AwardBadge";
 
 const metrics = [
   { value: "17", label: "lat praktyki na rynku nieruchomości" },
@@ -154,9 +153,32 @@ export default function Home() {
                     Czym się zajmuję
                   </a>
                 </div>
+
+                {/* Nagroda pełna: dyskretny eksponent pod CTA */}
+                <Link
+                  href="/nagrody"
+                  className="mt-10 flex items-center gap-5 rounded-2xl border border-border bg-background-soft/60 p-4 transition-all hover:border-fuchsia-300 hover:bg-background-soft hover:-translate-y-0.5 sm:max-w-md"
+                >
+                  <Image
+                    src="/images/nagrody/nagroda-pelna.png"
+                    alt="Pionier Etycznego Rynku Nieruchomości Off Market 2025"
+                    width={160}
+                    height={160}
+                    className="h-auto w-20 sm:w-24 object-contain drop-shadow-[0_8px_16px_rgba(122,82,16,0.15)]"
+                  />
+                  <div className="flex-1">
+                    <p className="kicker text-fuchsia-700">Wyróżnienie 2025</p>
+                    <p className="mt-1.5 font-display italic text-base leading-5 text-foreground-soft sm:text-lg">
+                      Pionier Etycznego Rynku Nieruchomości Off Market
+                    </p>
+                    <p className="mt-1 text-[0.7rem] font-mono text-muted-soft tracking-wider uppercase">
+                      XXV Businesswoman Awards
+                    </p>
+                  </div>
+                </Link>
               </div>
 
-              {/* Portret + Award Badge */}
+              {/* Portret */}
               <div className="reveal" style={{ ["--reveal-delay" as string]: "150ms" }}>
                 <div className="relative ml-auto max-w-[34rem]">
                   <div className="portrait-frame aspect-[3/4] w-full">
@@ -168,11 +190,6 @@ export default function Home() {
                       sizes="(min-width: 1024px) 34rem, (min-width: 640px) 60vw, 100vw"
                       className="object-cover object-top"
                     />
-                  </div>
-
-                  {/* Award badge: na mobile pod portretem, na desktop floating */}
-                  <div className="mt-6 sm:absolute sm:-bottom-6 sm:-right-3 sm:mt-0 lg:-right-6 sm:max-w-[20rem]">
-                    <AwardBadge />
                   </div>
 
                   {/* Telefon chip: ukryty na małym mobile, floating od sm+ */}
@@ -221,43 +238,6 @@ export default function Home() {
             </div>
 
             <CategoryCircles />
-          </div>
-        </section>
-
-        {/* ========== NAGRODY (preview z prawdziwym zdjęciem) ========== */}
-        <section className="relative px-6 py-20 sm:px-8 lg:px-10">
-          <div className="mx-auto max-w-7xl">
-            <div className="premium-panel champagne-line rounded-[2.5rem] px-8 py-12 sm:px-12 lg:px-16">
-              <div className="grid gap-10 lg:grid-cols-[0.55fr_0.45fr] lg:items-center">
-                <div>
-                  <span className="kicker">Wyróżnienie 2025</span>
-                  <h2 className="display-tight mt-5 text-3xl font-medium leading-[1.05] text-foreground sm:text-4xl">
-                    Pionier Etycznego Rynku Nieruchomości{" "}
-                    <span className="italic text-fuchsia-700">Off Market 2025.</span>
-                  </h2>
-                  <p className="mt-6 max-w-lg text-base leading-7 text-muted">
-                    Nieruchomości Spod Lady zostały uhonorowane podczas XXV Gali Businesswoman Awards
-                    (26.09.2025, Hotel Regent Warsaw). Wyróżnienie za wkład w budowanie nowoczesnego,
-                    etycznego rynku nieruchomości w Polsce.
-                  </p>
-                  <Link
-                    href="/nagrody"
-                    className="mt-8 inline-flex items-center gap-2 text-sm font-medium text-foreground hover:text-fuchsia-700"
-                  >
-                    Zobacz więcej o nagrodzie <span aria-hidden>→</span>
-                  </Link>
-                </div>
-                <div className="flex items-center justify-center">
-                  <Image
-                    src="/images/nagrody/nagroda-pelna.png"
-                    alt="Pionier Etycznego Rynku Nieruchomości Off Market 2025 — statuetka i odznaka"
-                    width={520}
-                    height={520}
-                    className="h-auto w-full max-w-[28rem] object-contain drop-shadow-[0_30px_50px_rgba(122,82,16,0.18)]"
-                  />
-                </div>
-              </div>
-            </div>
           </div>
         </section>
 
