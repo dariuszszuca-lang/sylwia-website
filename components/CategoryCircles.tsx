@@ -16,6 +16,7 @@ const categories: Category[] = [
     id: "posrednictwo",
     label: "Pośrednictwo",
     href: "/posrednictwo",
+    image: "/images/sylwia/klucze.jpg",
     icon: (
       <svg viewBox="0 0 32 32" fill="none" stroke="currentColor" strokeWidth="1.5">
         <path d="M5 17l4 4 6-6m4 8l8-8-3-3-8 8M11 6l3-3 8 8" strokeLinecap="round" strokeLinejoin="round" />
@@ -46,6 +47,7 @@ const categories: Category[] = [
     id: "wystapienia",
     label: "Wystąpienia",
     href: "/wystapienia",
+    image: "/images/sylwia/popiersie.jpg",
     icon: (
       <svg viewBox="0 0 32 32" fill="none" stroke="currentColor" strokeWidth="1.5">
         <rect x="13" y="4" width="6" height="14" rx="3" />
@@ -57,6 +59,7 @@ const categories: Category[] = [
     id: "mentoring",
     label: "Mentoring",
     href: "/mentoring",
+    image: "/images/sylwia/kawa.jpg",
     icon: (
       <svg viewBox="0 0 32 32" fill="none" stroke="currentColor" strokeWidth="1.5">
         <circle cx="12" cy="11" r="4" />
@@ -68,6 +71,7 @@ const categories: Category[] = [
     id: "biuro",
     label: "Biuro nieruchomości",
     href: "/biuro",
+    image: "/images/sylwia/dom-hunter-teczka.jpg",
     icon: (
       <svg viewBox="0 0 32 32" fill="none" stroke="currentColor" strokeWidth="1.5">
         <path d="M5 27V13l11-7 11 7v14M13 27v-7h6v7" strokeLinecap="round" strokeLinejoin="round" />
@@ -78,6 +82,7 @@ const categories: Category[] = [
     id: "nagrody",
     label: "Nagrody",
     href: "/nagrody",
+    image: "/images/nagrody/nagroda-pelna.png",
     icon: (
       <svg viewBox="0 0 32 32" fill="none" stroke="currentColor" strokeWidth="1.5">
         <path d="M10 5h12v6a6 6 0 11-12 0V5zM10 7H6v3a4 4 0 004 4M22 7h4v3a4 4 0 01-4 4M13 17l-1 5h8l-1-5M10 27h12" strokeLinecap="round" strokeLinejoin="round" />
