@@ -1,4 +1,5 @@
 import Image from "next/image";
+import Link from "next/link";
 
 type Category = {
   id: string;
@@ -14,7 +15,7 @@ const categories: Category[] = [
   {
     id: "posrednictwo",
     label: "Pośrednictwo",
-    href: "#posrednictwo",
+    href: "/posrednictwo",
     icon: (
       <svg viewBox="0 0 32 32" fill="none" stroke="currentColor" strokeWidth="1.5">
         <path d="M5 17l4 4 6-6m4 8l8-8-3-3-8 8M11 6l3-3 8 8" strokeLinecap="round" strokeLinejoin="round" />
@@ -24,7 +25,7 @@ const categories: Category[] = [
   {
     id: "inwestowanie",
     label: "Inwestowanie",
-    href: "#inwestowanie",
+    href: "/inwestowanie",
     icon: (
       <svg viewBox="0 0 32 32" fill="none" stroke="currentColor" strokeWidth="1.5">
         <path d="M5 24l7-7 5 5 9-12M19 10h7v7" strokeLinecap="round" strokeLinejoin="round" />
@@ -34,7 +35,7 @@ const categories: Category[] = [
   {
     id: "szkolenia",
     label: "Szkolenia",
-    href: "#szkolenia",
+    href: "/szkolenia",
     icon: (
       <svg viewBox="0 0 32 32" fill="none" stroke="currentColor" strokeWidth="1.5">
         <path d="M16 5l13 6-13 6L3 11l13-6zM9 14v8c0 1.5 3 3 7 3s7-1.5 7-3v-8" strokeLinecap="round" strokeLinejoin="round" />
@@ -44,7 +45,7 @@ const categories: Category[] = [
   {
     id: "wystapienia",
     label: "Wystąpienia",
-    href: "#wystapienia",
+    href: "/wystapienia",
     icon: (
       <svg viewBox="0 0 32 32" fill="none" stroke="currentColor" strokeWidth="1.5">
         <rect x="13" y="4" width="6" height="14" rx="3" />
@@ -55,7 +56,7 @@ const categories: Category[] = [
   {
     id: "mentoring",
     label: "Mentoring",
-    href: "#mentoring",
+    href: "/mentoring",
     icon: (
       <svg viewBox="0 0 32 32" fill="none" stroke="currentColor" strokeWidth="1.5">
         <circle cx="12" cy="11" r="4" />
@@ -66,7 +67,7 @@ const categories: Category[] = [
   {
     id: "biuro",
     label: "Biuro nieruchomości",
-    href: "#biuro",
+    href: "/biuro",
     icon: (
       <svg viewBox="0 0 32 32" fill="none" stroke="currentColor" strokeWidth="1.5">
         <path d="M5 27V13l11-7 11 7v14M13 27v-7h6v7" strokeLinecap="round" strokeLinejoin="round" />
@@ -76,7 +77,7 @@ const categories: Category[] = [
   {
     id: "nagrody",
     label: "Nagrody",
-    href: "#nagrody",
+    href: "/nagrody",
     icon: (
       <svg viewBox="0 0 32 32" fill="none" stroke="currentColor" strokeWidth="1.5">
         <path d="M10 5h12v6a6 6 0 11-12 0V5zM10 7H6v3a4 4 0 004 4M22 7h4v3a4 4 0 01-4 4M13 17l-1 5h8l-1-5M10 27h12" strokeLinecap="round" strokeLinejoin="round" />
@@ -86,7 +87,7 @@ const categories: Category[] = [
   {
     id: "publikacje",
     label: "Publikacje",
-    href: "#publikacje",
+    href: "/publikacje",
     icon: (
       <svg viewBox="0 0 32 32" fill="none" stroke="currentColor" strokeWidth="1.5">
         <path d="M4 8c4-2 8-2 12 0v18c-4-2-8-2-12 0V8zM16 8c4-2 8-2 12 0v18c-4-2-8-2-12 0" strokeLinecap="round" strokeLinejoin="round" />
@@ -99,7 +100,7 @@ export function CategoryCircles() {
   return (
     <div className="category-grid">
       {categories.map((cat) => (
-        <a
+        <Link
           key={cat.id}
           href={cat.href}
           className="category-circle"
@@ -120,7 +121,7 @@ export function CategoryCircles() {
             <span className="category-circle-overlay" aria-hidden />
             <span className="category-circle-label">{cat.label}</span>
           </div>
-        </a>
+        </Link>
       ))}
     </div>
   );

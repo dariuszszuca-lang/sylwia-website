@@ -8,8 +8,8 @@ import { CategoryCircles } from "@/components/CategoryCircles";
 import { AwardBadge } from "@/components/AwardBadge";
 
 const metrics = [
-  { value: "15+", label: "lat praktyki na rynku nieruchomości" },
-  { value: "1 600+", label: "agentów w społeczności Nieruchomości Spod Lady" },
+  { value: "17", label: "lat praktyki na rynku nieruchomości" },
+  { value: "2 000", label: "agentów w społeczności Nieruchomości Spod Lady" },
   { value: "18311", label: "numer licencji zawodowej" },
 ];
 
@@ -27,17 +27,17 @@ const faqItems = [
   {
     question: "Czym jest Nieruchomości Spod Lady?",
     answer:
-      "To zamknięta społeczność ponad 1 600 pośredników nieruchomości w Polsce. Wymieniamy się ofertami off-market, zamykamy transakcje wspólnie, dzielimy się wiedzą. Jestem założycielką tej społeczności.",
+      "To zamknięta społeczność ponad 2 000 pośredników nieruchomości w Polsce. Wymieniamy się ofertami off-market, zamykamy transakcje wspólnie, dzielimy się wiedzą. Jestem założycielką i liderem tej społeczności. W 2025 roku NSL zostało uhonorowane tytułem Pioniera Etycznego Rynku Nieruchomości Off Market.",
   },
   {
     question: "Czy prowadzę szkolenia dla biur i grup agentów?",
     answer:
-      "Tak. Warsztaty autorskie prowadzę w grupach od 8 do 30 osób, formaty zamknięte dla biur i otwarte dla społeczności agentów. Napisz mailem o terminach.",
+      "Tak. Jestem autorką jedynych warsztatów na rynku „Jak pracować, żeby każde zlecenie było rentowne”. Warsztaty prowadzę w grupach do 17 osób, format 4 godziny + sesja Q&A. Szczegóły na podstronie Szkolenia.",
   },
   {
     question: "Jak się ze mną skontaktować?",
     answer:
-      "Bezpośrednio telefonem (+48 571 309 209) lub mailem (sylwia@nieruchomoscispodlady.pl). Odpisuję sama, bez asystentów i automatów.",
+      "Bezpośrednio telefonem (+48 571 309 209) lub mailem (swroblewska@domhunter.pl). Odpisuję sama, bez asystentów i automatów.",
   },
 ];
 
@@ -47,13 +47,13 @@ const jsonLd = {
     {
       "@type": "Person",
       "@id": "https://sylwiawroblewska.pl/#person",
-      name: "Sylwia Wróblewska",
+      name: "Sylwia Paulina Wróblewska",
       jobTitle: "Pośredniczka nieruchomości, inwestorka, trenerka",
       description:
-        "Sylwia Wróblewska, pośredniczka nieruchomości z Trójmiasta, założycielka Nieruchomości Spod Lady. Laureatka nagrody Pionier Etycznego Rynku Nieruchomości Off Market 2025.",
+        "Sylwia Wróblewska, pośredniczka nieruchomości z Trójmiasta, założycielka Nieruchomości Spod Lady (2000 agentów). Laureatka nagrody Pionier Etycznego Rynku Nieruchomości Off Market 2025.",
       image: "https://sylwiawroblewska.pl/images/sylwia-wroblewska.jpg",
       url: "https://sylwiawroblewska.pl",
-      email: "mailto:sylwia@nieruchomoscispodlady.pl",
+      email: "mailto:swroblewska@domhunter.pl",
       telephone: "+48571309209",
       address: {
         "@type": "PostalAddress",
@@ -62,6 +62,11 @@ const jsonLd = {
         addressCountry: "PL",
       },
       award: "Pionier Etycznego Rynku Nieruchomości Off Market 2025, Businesswoman Awards",
+      worksFor: {
+        "@type": "Organization",
+        name: "Dom Hunter Sp. z o.o.",
+        url: "https://www.domhunter.pl",
+      },
       knowsAbout: [
         "sprzedaż nieruchomości",
         "nieruchomości off-market",
@@ -74,6 +79,7 @@ const jsonLd = {
         "https://www.facebook.com/groups/nieruchomoscispodlady",
         "https://nieruchomoscispodlady.pl",
         "https://akademia-ai-nieruchomosci.pl",
+        "https://www.domhunter.pl",
       ],
     },
     {
@@ -102,7 +108,6 @@ export default function Home() {
       <SiteHeader />
 
       <main id="top" className="relative overflow-hidden pt-2">
-        {/* Subtelny ambient glow */}
         <div className="pointer-events-none absolute inset-0 -z-10">
           <div className="absolute -left-24 top-[-10%] h-[36rem] w-[36rem] rounded-full bg-fuchsia-200/20 blur-[140px]" />
           <div className="absolute right-[-8%] top-[18%] h-[32rem] w-[32rem] rounded-full bg-champagne-100/40 blur-[160px]" />
@@ -130,11 +135,11 @@ export default function Home() {
                 </h1>
 
                 <p className="mt-8 max-w-xl text-base leading-8 text-muted sm:text-lg">
-                  Sylwia Wróblewska. 15 lat na rynku nieruchomości, właścicielka butikowego biura{" "}
-                  <strong className="font-semibold text-foreground-soft">Dom Hunter</strong>,
-                  założycielka{" "}
-                  <strong className="font-semibold text-foreground-soft">Nieruchomości Spod Lady</strong>{" "}
-                  , społeczności 1 600 pośredników w Polsce.
+                  Sylwia Wróblewska. 17 lat na rynku nieruchomości, właścicielka butikowego biura{" "}
+                  <strong className="font-semibold text-foreground-soft">Dom Hunter Sp. z o.o.</strong>{" "}
+                  w Trójmieście, założycielka i lider społeczności{" "}
+                  <strong className="font-semibold text-foreground-soft">Nieruchomości Spod Lady</strong>,
+                  która zrzesza 2 000 agentów w Polsce.
                 </p>
 
                 <blockquote className="mt-8 max-w-xl border-l-2 border-fuchsia-500 pl-5 italic font-display text-lg leading-7 text-foreground-soft sm:text-xl sm:leading-8">
@@ -142,7 +147,7 @@ export default function Home() {
                 </blockquote>
 
                 <div className="mt-10 flex flex-col gap-3 sm:flex-row">
-                  <a href="#kontakt" className="btn-primary">
+                  <a href="mailto:swroblewska@domhunter.pl" className="btn-primary">
                     Napisz do mnie
                   </a>
                   <a href="#czym-sie-zajmuje" className="btn-secondary">
@@ -210,7 +215,7 @@ export default function Home() {
                 Osiem obszarów. <span className="italic text-fuchsia-700">Jedna spójna praca.</span>
               </h2>
               <p className="mx-auto mt-6 max-w-2xl text-base leading-8 text-muted">
-                Wszystko, czym zajmuję się zawodowo, łączy ta sama zasada: współpraca, zaufanie, konkretne efekty.
+                Kliknij dowolne kółko, żeby zobaczyć szczegóły.
               </p>
             </div>
 
@@ -218,212 +223,45 @@ export default function Home() {
           </div>
         </section>
 
-        {/* ========== POŚREDNICTWO ========== */}
-        <section id="posrednictwo" className="relative px-6 py-20 sm:px-8 lg:px-10 scroll-mt-24">
-          <div className="mx-auto max-w-7xl">
-            <div className="grid gap-10 lg:grid-cols-[0.42fr_0.58fr] lg:items-start">
-              <div>
-                <span className="kicker">Pośrednictwo</span>
-                <h2 className="display-tight mt-5 text-4xl font-medium leading-[1.02] text-foreground sm:text-5xl">
-                  Sprzedaż <span className="italic text-fuchsia-700">off-market.</span>
-                </h2>
-              </div>
-              <div className="text-base leading-8 text-muted sm:text-lg space-y-4">
-                <p>
-                  Prowadzę butikowe biuro Dom Hunter w Trójmieście. Mała liczba projektów rocznie, każdy klient
-                  dostaje moją głowę i czas, nie zespołu juniorów.
-                </p>
-                <p>
-                  Klienci coraz częściej nie chcą afiszować się ze sprzedażą na portalach. Prywatność i dyskrecja
-                  zyskują na wartości. Pracuję tam, gdzie zaufanie i relacja są ważniejsze niż liczba ofert w bazie.
-                </p>
-              </div>
-            </div>
-          </div>
-        </section>
-
-        {/* ========== INWESTOWANIE ========== */}
-        <section id="inwestowanie" className="relative px-6 py-20 sm:px-8 lg:px-10 scroll-mt-24">
+        {/* ========== NAGRODY (preview z prawdziwym zdjęciem) ========== */}
+        <section className="relative px-6 py-20 sm:px-8 lg:px-10">
           <div className="mx-auto max-w-7xl">
             <div className="premium-panel champagne-line rounded-[2.5rem] px-8 py-12 sm:px-12 lg:px-16">
-              <div className="grid gap-8 lg:grid-cols-[0.42fr_0.58fr] lg:items-start">
+              <div className="grid gap-10 lg:grid-cols-[0.55fr_0.45fr] lg:items-center">
                 <div>
-                  <span className="kicker">Inwestowanie</span>
-                  <h2 className="display-tight mt-5 text-3xl font-medium leading-[1.05] text-foreground sm:text-4xl">
-                    Pomagam wybrać <span className="italic text-fuchsia-700">właściwą inwestycję.</span>
-                  </h2>
-                </div>
-                <div className="text-base leading-7 text-muted">
-                  <p>
-                    Współpracuję z inwestorami szukającymi nieruchomości pod wynajem, flipy lub długoterminowy portfel.
-                    Wybór mieszkania to nie tylko cena za metr. To lokalizacja, plan miejscowy, stan prawny, potencjał
-                    najmu, koszty utrzymania. Pomagam to wszystko przeliczyć przed decyzją.
-                  </p>
-                </div>
-              </div>
-            </div>
-          </div>
-        </section>
-
-        {/* ========== SZKOLENIA ========== */}
-        <section id="szkolenia" className="relative px-6 py-20 sm:px-8 lg:px-10 scroll-mt-24">
-          <div className="mx-auto max-w-7xl">
-            <div className="grid gap-10 lg:grid-cols-[0.55fr_0.45fr] lg:items-start">
-              <div>
-                <span className="kicker">Szkolenia</span>
-                <h2 className="display-tight mt-5 text-4xl font-medium leading-[1.02] text-foreground sm:text-5xl">
-                  Autorskie warsztaty dla <span className="italic text-fuchsia-700">pośredników.</span>
-                </h2>
-                <p className="mt-6 max-w-xl text-base leading-8 text-muted">
-                  Warsztaty zamknięte dla biur i otwarte dla społeczności agentów. Pracuję na konkretach z rynku,
-                  nie na slajdach. Grupa minimum 8, maksimum 30 osób.
-                </p>
-                <div className="mt-8 flex flex-col gap-3 sm:flex-row">
-                  <a
-                    href="mailto:sylwia@nieruchomoscispodlady.pl?subject=Zapytanie%20o%20warsztat"
-                    className="btn-primary"
-                  >
-                    Zapytaj o termin
-                  </a>
-                </div>
-              </div>
-              <div className="premium-panel rounded-3xl p-8">
-                <p className="kicker">Tematy szkoleń</p>
-                <ul className="mt-5 space-y-3">
-                  {[
-                    "Sprzedaż off-market w praktyce",
-                    "Współpraca między agentami",
-                    "Marka osobista pośrednika",
-                    "Praca z klientem na wyłączność",
-                    "Pozycjonowanie i narracja ceny",
-                  ].map((t) => (
-                    <li key={t} className="flex items-start gap-3 text-sm leading-7 text-foreground-soft">
-                      <span className="mt-2.5 h-px w-5 flex-shrink-0 bg-fuchsia-500" aria-hidden />
-                      <span>{t}</span>
-                    </li>
-                  ))}
-                </ul>
-              </div>
-            </div>
-          </div>
-        </section>
-
-        {/* ========== WYSTĄPIENIA ========== */}
-        <section id="wystapienia" className="relative px-6 py-20 sm:px-8 lg:px-10 scroll-mt-24">
-          <div className="mx-auto max-w-7xl">
-            <div className="grid gap-10 lg:grid-cols-[0.42fr_0.58fr] lg:items-start">
-              <div>
-                <span className="kicker">Wystąpienia</span>
-                <h2 className="display-tight mt-5 text-4xl font-medium leading-[1.02] text-foreground sm:text-5xl">
-                  Konferencje, panele, <span className="italic text-fuchsia-700">media.</span>
-                </h2>
-              </div>
-              <div className="text-base leading-8 text-muted sm:text-lg space-y-4">
-                <p>
-                  Występuję na konferencjach branży nieruchomości, w panelach eksperckich i w mediach.
-                  Tematy: rynek off-market, etyka zawodu, budowa społeczności agentów, marka osobista.
-                </p>
-                <p className="text-sm text-muted-soft">
-                  Zaproszenie do wystąpienia? Napisz na{" "}
-                  <a href="mailto:sylwia@nieruchomoscispodlady.pl" className="text-foreground hover:text-fuchsia-700">
-                    sylwia@nieruchomoscispodlady.pl
-                  </a>.
-                </p>
-              </div>
-            </div>
-          </div>
-        </section>
-
-        {/* ========== MENTORING ========== */}
-        <section id="mentoring" className="relative px-6 py-20 sm:px-8 lg:px-10 scroll-mt-24">
-          <div className="mx-auto max-w-7xl">
-            <div className="premium-panel rounded-[2.5rem] px-8 py-12 sm:px-12 lg:px-16">
-              <div className="grid gap-8 lg:grid-cols-[0.42fr_0.58fr] lg:items-start">
-                <div>
-                  <span className="kicker">Mentoring</span>
-                  <h2 className="display-tight mt-5 text-3xl font-medium leading-[1.05] text-foreground sm:text-4xl">
-                    Indywidualny <span className="italic text-fuchsia-700">mentoring</span> dla agentów.
-                  </h2>
-                </div>
-                <div className="text-base leading-7 text-muted">
-                  <p>
-                    Pracuję 1:1 z agentami, którzy chcą zbudować markę osobistą, ułożyć strategię sprzedaży i wejść
-                    w rynek off-market świadomie. Format dopasowuję do potrzeb i etapu kariery.
-                  </p>
-                </div>
-              </div>
-            </div>
-          </div>
-        </section>
-
-        {/* ========== BIURO ========== */}
-        <section id="biuro" className="relative px-6 py-20 sm:px-8 lg:px-10 scroll-mt-24">
-          <div className="mx-auto max-w-7xl">
-            <div className="grid gap-10 lg:grid-cols-[0.42fr_0.58fr] lg:items-start">
-              <div>
-                <span className="kicker">Biuro nieruchomości</span>
-                <h2 className="display-tight mt-5 text-4xl font-medium leading-[1.02] text-foreground sm:text-5xl">
-                  Dom Hunter <span className="italic text-fuchsia-700">Trójmiasto.</span>
-                </h2>
-              </div>
-              <div className="text-base leading-8 text-muted sm:text-lg space-y-4">
-                <p>
-                  Butikowe biuro nieruchomości w Trójmieście. Mała liczba projektów rocznie, dyskrecja, praca na
-                  relację. Sprzedaż wtórna, pierwotna, działki, komercja.
-                </p>
-              </div>
-            </div>
-          </div>
-        </section>
-
-        {/* ========== NAGRODY ========== */}
-        <section id="nagrody" className="relative px-6 py-20 sm:px-8 lg:px-10 scroll-mt-24">
-          <div className="mx-auto max-w-7xl">
-            <div className="premium-panel champagne-line rounded-[2.5rem] px-8 py-12 sm:px-12 lg:px-16">
-              <div className="grid gap-10 lg:grid-cols-[0.42fr_0.58fr] lg:items-center">
-                <div>
-                  <span className="kicker">Nagrody</span>
+                  <span className="kicker">Wyróżnienie 2025</span>
                   <h2 className="display-tight mt-5 text-3xl font-medium leading-[1.05] text-foreground sm:text-4xl">
                     Pionier Etycznego Rynku Nieruchomości{" "}
                     <span className="italic text-fuchsia-700">Off Market 2025.</span>
                   </h2>
                   <p className="mt-6 max-w-lg text-base leading-7 text-muted">
-                    Nieruchomości Spod Lady zostały uhonorowane podczas XXV Gali Businesswoman Awards (26.09.2025).
-                    Wyróżnienie za wkład w budowanie nowoczesnego, etycznego i opartego na współpracy rynku
-                    nieruchomości w Polsce.
+                    Nieruchomości Spod Lady zostały uhonorowane podczas XXV Gali Businesswoman Awards
+                    (26.09.2025, Hotel Regent Warsaw). Wyróżnienie za wkład w budowanie nowoczesnego,
+                    etycznego rynku nieruchomości w Polsce.
                   </p>
+                  <Link
+                    href="/nagrody"
+                    className="mt-8 inline-flex items-center gap-2 text-sm font-medium text-foreground hover:text-fuchsia-700"
+                  >
+                    Zobacz więcej o nagrodzie <span aria-hidden>→</span>
+                  </Link>
                 </div>
-                <div className="flex justify-center">
-                  <div className="relative aspect-[3/4] w-full max-w-[20rem] rounded-3xl overflow-hidden border border-border-luxe bg-gradient-to-br from-champagne-50 to-champagne-100">
-                    <div className="absolute inset-0 flex items-center justify-center text-champagne-400">
-                      <svg viewBox="0 0 120 160" className="w-32 h-44" fill="currentColor">
-                        <path d="M60 20 L65 35 L80 30 L72 45 L85 55 L70 60 L75 75 L60 70 L45 75 L50 60 L35 55 L48 45 L40 30 L55 35 Z" opacity="0.4" />
-                        <rect x="45" y="80" width="30" height="50" rx="2" />
-                        <rect x="40" y="130" width="40" height="10" rx="2" />
-                      </svg>
-                    </div>
-                  </div>
+                <div className="flex items-center justify-center gap-6">
+                  <Image
+                    src="/images/nagrody/statuetka.png"
+                    alt="Statuetka Pionier Etycznego Rynku Nieruchomości Off Market 2025"
+                    width={200}
+                    height={400}
+                    className="h-auto w-auto max-h-[18rem] object-contain drop-shadow-[0_24px_40px_rgba(122,82,16,0.25)]"
+                  />
+                  <Image
+                    src="/images/nagrody/odznaka-pioniera.png"
+                    alt="Odznaka Pionier Etycznego Rynku Nieruchomości Off Market 2025"
+                    width={180}
+                    height={180}
+                    className="h-auto w-auto max-h-[10rem] object-contain drop-shadow-[0_12px_24px_rgba(122,82,16,0.2)]"
+                  />
                 </div>
-              </div>
-            </div>
-          </div>
-        </section>
-
-        {/* ========== PUBLIKACJE ========== */}
-        <section id="publikacje" className="relative px-6 py-20 sm:px-8 lg:px-10 scroll-mt-24">
-          <div className="mx-auto max-w-7xl">
-            <div className="grid gap-10 lg:grid-cols-[0.42fr_0.58fr] lg:items-start">
-              <div>
-                <span className="kicker">Publikacje</span>
-                <h2 className="display-tight mt-5 text-4xl font-medium leading-[1.02] text-foreground sm:text-5xl">
-                  Magazyn <span className="italic text-fuchsia-700">Nieruchomości</span> i media branżowe.
-                </h2>
-              </div>
-              <div className="text-base leading-8 text-muted sm:text-lg space-y-4">
-                <p>
-                  Komentarze, wywiady i artykuły dla magazynu Nieruchomości oraz innych mediów branżowych.
-                  Tematy: rynek off-market, etyka zawodu, marka osobista pośrednika, współpraca agentów.
-                </p>
               </div>
             </div>
           </div>
@@ -472,7 +310,7 @@ export default function Home() {
         </section>
 
         {/* ========== KONTAKT ========== */}
-        <section id="kontakt" className="relative px-6 py-16 sm:px-8 lg:px-10 scroll-mt-24">
+        <section className="relative px-6 py-16 sm:px-8 lg:px-10">
           <div className="mx-auto max-w-7xl">
             <div className="premium-panel champagne-line relative overflow-hidden rounded-[2.5rem] px-8 py-16 text-center sm:px-12 sm:py-20">
               <div className="pointer-events-none absolute inset-0">
@@ -486,8 +324,8 @@ export default function Home() {
                 </h2>
 
                 <div className="mt-10 flex flex-col items-center justify-center gap-3 sm:flex-row">
-                  <a href="mailto:sylwia@nieruchomoscispodlady.pl" className="btn-primary">
-                    sylwia@nieruchomoscispodlady.pl
+                  <a href="mailto:swroblewska@domhunter.pl" className="btn-primary">
+                    swroblewska@domhunter.pl
                   </a>
                   <a href="tel:+48571309209" className="btn-secondary">
                     +48 571 309 209
@@ -514,14 +352,14 @@ export default function Home() {
                 <div>
                   <p className="text-sm font-semibold text-foreground">Sekcje</p>
                   <div className="mt-4 flex flex-col gap-2 text-sm text-muted">
-                    <a href="#posrednictwo" className="hover:text-fuchsia-700">Pośrednictwo</a>
-                    <a href="#inwestowanie" className="hover:text-fuchsia-700">Inwestowanie</a>
-                    <a href="#szkolenia" className="hover:text-fuchsia-700">Szkolenia</a>
-                    <a href="#wystapienia" className="hover:text-fuchsia-700">Wystąpienia</a>
-                    <a href="#mentoring" className="hover:text-fuchsia-700">Mentoring</a>
-                    <a href="#biuro" className="hover:text-fuchsia-700">Dom Hunter</a>
-                    <a href="#nagrody" className="hover:text-fuchsia-700">Nagrody</a>
-                    <a href="#publikacje" className="hover:text-fuchsia-700">Publikacje</a>
+                    <Link href="/posrednictwo" className="hover:text-fuchsia-700">Pośrednictwo</Link>
+                    <Link href="/inwestowanie" className="hover:text-fuchsia-700">Inwestowanie</Link>
+                    <Link href="/szkolenia" className="hover:text-fuchsia-700">Szkolenia</Link>
+                    <Link href="/wystapienia" className="hover:text-fuchsia-700">Wystąpienia</Link>
+                    <Link href="/mentoring" className="hover:text-fuchsia-700">Mentoring</Link>
+                    <Link href="/biuro" className="hover:text-fuchsia-700">Dom Hunter</Link>
+                    <Link href="/nagrody" className="hover:text-fuchsia-700">Nagrody</Link>
+                    <Link href="/publikacje" className="hover:text-fuchsia-700">Publikacje</Link>
                     <Link href="/konsultacje" className="hover:text-fuchsia-700">
                       Konsultacje 1:1
                     </Link>
@@ -538,10 +376,26 @@ export default function Home() {
                       +48 571 309 209
                     </a>
                     <a
-                      href="mailto:sylwia@nieruchomoscispodlady.pl"
+                      href="mailto:swroblewska@domhunter.pl"
                       className="hover:text-fuchsia-700"
                     >
-                      sylwia@nieruchomoscispodlady.pl
+                      swroblewska@domhunter.pl
+                    </a>
+                    <a
+                      href="https://www.domhunter.pl"
+                      target="_blank"
+                      rel="noreferrer"
+                      className="hover:text-fuchsia-700"
+                    >
+                      domhunter.pl
+                    </a>
+                    <a
+                      href="https://www.nieruchomoscispodlady.pl"
+                      target="_blank"
+                      rel="noreferrer"
+                      className="hover:text-fuchsia-700"
+                    >
+                      nieruchomoscispodlady.pl
                     </a>
                     <a
                       href="https://www.instagram.com/sylwiawroblewska.pl/"
@@ -550,14 +404,6 @@ export default function Home() {
                       className="hover:text-fuchsia-700"
                     >
                       Instagram
-                    </a>
-                    <a
-                      href="https://www.facebook.com/groups/nieruchomoscispodlady"
-                      target="_blank"
-                      rel="noreferrer"
-                      className="hover:text-fuchsia-700"
-                    >
-                      Grupa NSL
                     </a>
                   </div>
                 </div>
