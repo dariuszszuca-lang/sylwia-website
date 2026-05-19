@@ -356,7 +356,7 @@ export default function Home() {
                   href: "/szkolenia",
                   label: "Szkolenia",
                   num: "03",
-                  text: "Autorskie warsztaty „Jak pracować, żeby każde zlecenie było rentowne”. 3 500 zł brutto, do 17 osób, zwracają się po pierwszej umowie.",
+                  text: "Autorskie warsztaty „Jak pracować, żeby każde zlecenie było rentowne”. Do 17 osób, zwracają się po pierwszej podpisanej umowie.",
                 },
                 {
                   href: "/wystapienia",

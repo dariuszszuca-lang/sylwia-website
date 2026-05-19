@@ -3,7 +3,7 @@ import { SubpageLayout } from "@/components/SubpageLayout";
 export const metadata = {
   title: "Szkolenia · Sylwia Wróblewska",
   description:
-    "Autorskie warsztaty dla pośredników nieruchomości. „Jak pracować, żeby każde zlecenie było rentowne”. 3 500 zł brutto, do 17 osób. Warsztaty zwracają się po pierwszej podpisanej umowie.",
+    "Autorskie warsztaty dla pośredników nieruchomości. „Jak pracować, żeby każde zlecenie było rentowne”. Do 17 osób. Warsztaty zwracają się po pierwszej podpisanej umowie.",
 };
 
 const opinie = [
@@ -40,19 +40,19 @@ export default function SzkoleniaPage() {
           </blockquote>
         </section>
 
-        {/* FORMAT I CENA */}
+        {/* FORMAT */}
         <section className="mt-16">
           <div className="premium-panel champagne-line rounded-[2rem] p-8 sm:p-12">
-            <span className="kicker">Format i cena</span>
+            <span className="kicker">Format warsztatu</span>
             <h2 className="display-tight mt-5 text-3xl font-medium leading-[1.05] text-foreground sm:text-4xl">
-              <span className="italic text-fuchsia-700">3 500 zł</span> brutto za warsztat.
+              Praktyka, nie teoria. <span className="italic text-fuchsia-700">Konkret.</span>
             </h2>
 
             <div className="mt-10 grid gap-6 md:grid-cols-3">
               <div className="rounded-2xl border border-border bg-background-soft/60 p-6">
                 <p className="kicker">Liczebność</p>
                 <p className="mt-3 text-2xl font-display text-foreground">do 17 osób</p>
-                <p className="mt-2 text-sm text-muted">+100 zł za każdą kolejną osobę</p>
+                <p className="mt-2 text-sm text-muted">Kameralna grupa, indywidualne podejście</p>
               </div>
               <div className="rounded-2xl border border-border bg-background-soft/60 p-6">
                 <p className="kicker">Warsztat</p>
@@ -66,7 +66,7 @@ export default function SzkoleniaPage() {
               </div>
             </div>
 
-            <p className="mt-8 text-sm text-muted-soft">Faktura VAT. Płatność po podpisaniu umowy.</p>
+            <p className="mt-8 text-sm text-muted-soft">Szczegóły i wycena indywidualnie po kontakcie.</p>
           </div>
         </section>
 
