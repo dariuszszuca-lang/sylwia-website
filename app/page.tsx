@@ -123,7 +123,7 @@ export default function Home() {
                   Trójmiasto · Polska
                 </div>
 
-                <h1 className="display mt-7 text-[2.5rem] leading-[0.95] font-medium text-foreground sm:text-[4rem] sm:leading-[0.92] lg:text-[5.5rem]">
+                <h1 className="display mt-7 text-[2.25rem] leading-[1] font-medium text-foreground sm:text-[3.45rem] sm:leading-[0.96] lg:text-[4.75rem]">
                   Pośrednik.
                   <br />
                   <span className="text-foreground-soft">Inwestor.</span>

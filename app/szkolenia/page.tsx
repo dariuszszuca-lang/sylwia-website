@@ -40,36 +40,6 @@ export default function SzkoleniaPage() {
           </blockquote>
         </section>
 
-        {/* FORMAT */}
-        <section className="mt-16">
-          <div className="premium-panel champagne-line rounded-[2rem] p-8 sm:p-12">
-            <span className="kicker">Format warsztatu</span>
-            <h2 className="display-tight mt-5 text-3xl font-medium leading-[1.05] text-foreground sm:text-4xl">
-              Praktyka, nie teoria. <span className="italic text-fuchsia-700">Konkret.</span>
-            </h2>
-
-            <div className="mt-10 grid gap-6 md:grid-cols-3">
-              <div className="rounded-2xl border border-border bg-background-soft/60 p-6">
-                <p className="kicker">Liczebność</p>
-                <p className="mt-3 text-2xl font-display text-foreground">do 17 osób</p>
-                <p className="mt-2 text-sm text-muted">Kameralna grupa, indywidualne podejście</p>
-              </div>
-              <div className="rounded-2xl border border-border bg-background-soft/60 p-6">
-                <p className="kicker">Warsztat</p>
-                <p className="mt-3 text-2xl font-display text-foreground">min. 4 h</p>
-                <p className="mt-2 text-sm text-muted">Praktyka i konkretne przykłady</p>
-              </div>
-              <div className="rounded-2xl border border-border bg-background-soft/60 p-6">
-                <p className="kicker">Sesja Q&amp;A</p>
-                <p className="mt-3 text-2xl font-display text-foreground">5 h</p>
-                <p className="mt-2 text-sm text-muted">+ indywidualne konsultacje do 6 h</p>
-              </div>
-            </div>
-
-            <p className="mt-8 text-sm text-muted-soft">Szczegóły i wycena indywidualnie po kontakcie.</p>
-          </div>
-        </section>
-
         {/* OPINIE */}
         <section className="mt-16">
           <span className="kicker">Co mówią kursanci</span>
