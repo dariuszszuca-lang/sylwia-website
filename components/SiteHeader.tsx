@@ -10,6 +10,7 @@ const NAV = [
   { href: "/nsl", id: "nsl", label: "NSL" },
   { href: "/biuro", id: "biuro", label: "Dom Hunter" },
   { href: "/szkolenia", id: "szkolenia", label: "Szkolenia" },
+  { href: "/blog", id: "blog", label: "Blog" },
 ];
 
 export function SiteHeader() {

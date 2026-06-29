@@ -5,6 +5,8 @@ import { FAQAccordion } from "@/components/FAQAccordion";
 import { NewsletterForm } from "@/components/NewsletterForm";
 import { LogoText } from "@/components/LogoText";
 import { CategoryCircles } from "@/components/CategoryCircles";
+import { BlogCard, BlogCardSoon } from "@/components/BlogCard";
+import { posts } from "./blog/posts";
 
 const metrics = [
   { value: "17", label: "lat praktyki na rynku nieruchomości" },
@@ -580,6 +582,40 @@ export default function Home() {
               <a href="mailto:swroblewska@domhunter.pl" className="btn-primary">
                 Napisz do mnie
               </a>
+            </div>
+          </div>
+        </section>
+
+        {/* ========== BLOG ========== */}
+        <section className="relative px-6 py-20 sm:px-8 lg:px-10">
+          <div className="mx-auto max-w-7xl">
+            <div className="mb-12 flex items-end justify-between gap-6">
+              <div>
+                <span className="kicker">Blog</span>
+                <h2 className="display-tight mt-5 max-w-3xl text-4xl font-medium leading-[1.02] text-foreground sm:text-5xl">
+                  Z mojego <span className="italic text-fuchsia-700">bloga.</span>
+                </h2>
+              </div>
+              <Link
+                href="/blog"
+                className="hidden items-center gap-2 whitespace-nowrap text-sm font-medium text-foreground hover:text-fuchsia-700 sm:inline-flex"
+              >
+                Wszystkie artykuły <span aria-hidden>→</span>
+              </Link>
+            </div>
+
+            <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
+              {posts.slice(0, 1).map((p) => (
+                <BlogCard key={p.slug} post={p} />
+              ))}
+              <BlogCardSoon label="Następny artykuł w przygotowaniu" />
+              <BlogCardSoon label="Kolejny temat z rynku off-market" />
+            </div>
+
+            <div className="mt-8 sm:hidden">
+              <Link href="/blog" className="btn-secondary inline-flex">
+                Wszystkie artykuły →
+              </Link>
             </div>
           </div>
         </section>
