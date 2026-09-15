@@ -25,7 +25,6 @@ export default function BlogPage() {
             <BlogCard key={p.slug} post={p} />
           ))}
           <BlogCardSoon label="Następny artykuł już w przygotowaniu" />
-          <BlogCardSoon label="Kolejny temat z rynku off-market" />
         </div>
       </div>
     </SubpageLayout>
