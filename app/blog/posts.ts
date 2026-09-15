@@ -10,6 +10,16 @@ export type Post = {
 
 export const posts: Post[] = [
   {
+    slug: "czule-slowka",
+    title: "Czułe słówka, czyli o randkowaniu z nieruchomościami",
+    excerpt:
+      "18 lat w związku z tą branżą. Setki randek i relacji. I mimo tego stażu dalej czasem daję się nabrać na czułe słówka.",
+    date: "2026-09-15",
+    dateLabel: "15 września 2026",
+    cover: "/images/blog/czule-slowka.jpg",
+    coverAlt: "Czułe słówka. Sylwia Wróblewska z filiżanką kawy o randkowaniu z klientami na rynku nieruchomości.",
+  },
+  {
     slug: "grilowanie-posrednikow",
     title: "Grilowanie pośredników",
     excerpt:
