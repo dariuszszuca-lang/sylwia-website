@@ -131,7 +131,7 @@ export default function Home() {
                   <span className="text-foreground-soft">Inwestor.</span>
                   <br />
                   <span className="bg-gradient-to-br from-fuchsia-700 via-fuchsia-600 to-fuchsia-500 bg-clip-text text-transparent">
-                    Trener.
+                    Mentor.
                   </span>
                 </h1>
 

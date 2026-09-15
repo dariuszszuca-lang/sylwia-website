@@ -26,7 +26,7 @@ const mono = Geist_Mono({
 export const metadata: Metadata = {
   metadataBase: new URL("https://sylwiawroblewska.pl"),
   title: {
-    default: "Sylwia Wróblewska | Pośrednik, inwestor, trener · Trójmiasto",
+    default: "Sylwia Wróblewska | Pośrednik, inwestor, mentor · Trójmiasto",
     template: "%s | Sylwia Wróblewska",
   },
   description:
@@ -48,7 +48,7 @@ export const metadata: Metadata = {
     canonical: "/",
   },
   openGraph: {
-    title: "Sylwia Wróblewska | Pośrednik, inwestor, trener · Trójmiasto",
+    title: "Sylwia Wróblewska | Pośrednik, inwestor, mentor · Trójmiasto",
     description:
       "17 lat na rynku nieruchomości. Dom Hunter w Gdańsku, społeczność Nieruchomości Spod Lady (2 000 agentów w 8 regionach Polski), Pionier Etycznego Rynku Off Market 2025.",
     url: "https://sylwiawroblewska.pl",
@@ -66,7 +66,7 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "Sylwia Wróblewska | Pośrednik, inwestor, trener",
+    title: "Sylwia Wróblewska | Pośrednik, inwestor, mentor",
     description:
       "Dom Hunter Gdańsk, społeczność NSL (2 000 agentów), Pionier Etycznego Rynku Off Market 2025.",
     images: ["/images/sylwia-wroblewska.jpg"],
