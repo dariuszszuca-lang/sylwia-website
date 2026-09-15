@@ -24,8 +24,11 @@ export default function ArtykulCzuleSlowka() {
     >
       <article className="mx-auto max-w-2xl">
         <div className="space-y-9 text-base leading-8 text-foreground-soft sm:space-y-10 sm:text-lg sm:leading-9">
-          <p className="first-letter:float-left first-letter:mr-3 first-letter:mt-1 first-letter:font-display first-letter:text-6xl first-letter:font-medium first-letter:leading-[0.9] first-letter:text-fuchsia-700">
-            18 lat „w związku” z tą branżą. Setki randek i relacji. Kilka takich na całe życie,
+          <p>
+            <span className="float-left mr-3 mt-1 font-display text-6xl font-medium leading-[0.9] text-fuchsia-700">
+              18
+            </span>{" "}
+            lat „w związku” z tą branżą. Setki randek i relacji. Kilka takich na całe życie,
             parę toksycznych, po których jeszcze długo bolał brzuch.
           </p>
           <p>
